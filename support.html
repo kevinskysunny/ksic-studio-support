@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KSIC Studio Support</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .card { margin: 20px 0; padding: 18px 20px; border: 1px solid #8885; border-radius: 14px; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>KSIC Studio Support</h1>
+    <p>KSIC Studio is a local-first macOS work launcher. If you run into a problem, the following information may help.</p>
+    <div class="card">
+      <strong>Contact support</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      Include your macOS version, app version, steps to reproduce, and screenshots without private information. We normally reply within three business days.
+    </div>
+    <h2>Frequently asked questions</h2>
+    <p><strong>Where is my data stored?</strong><br>Work groups, entries, and Recents stay in the App Sandbox and are not uploaded automatically.</p>
+    <p><strong>Why does an HTTP address have no health status?</strong><br>For connection safety, the app checks HTTPS addresses only. HTTP addresses can still open in your default browser.</p>
+    <p><strong>How do I migrate configuration?</strong><br>In Settings, import a web-edition JSON file or use the store edition’s backup and restore features. Back up before importing.</p>
+    <p><strong>How does language selection work?</strong><br>The app follows the language selected for it in macOS and supports English and Simplified Chinese. Change the app language in macOS settings, then relaunch the app. There is no separate in-app language setting.</p>
+    <p><strong>How do I remove all data?</strong><br>Use Restore Default Entries in Settings. Export any configuration you want to keep first.</p>
+    <h2>Privacy</h2>
+    <p>Read the <a href="privacy.html">KSIC Studio Privacy Policy</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>KSIC Studio 支持</h1>
+    <p>KSIC Studio 是一款本地优先的 macOS 工作入口管理器。使用中遇到问题，可以先参考以下说明。</p>
+    <div class="card">
+      <strong>联系支持</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      请附上 macOS 版本、App 版本、复现步骤和不含隐私信息的截图。通常会在 3 个工作日内回复。
+    </div>
+    <h2>常见问题</h2>
+    <p><strong>数据保存在哪里？</strong><br>分组、入口和最近使用记录保存在 App Sandbox，不会自动上传。</p>
+    <p><strong>为什么 HTTP 地址没有健康状态？</strong><br>为保护连接安全，App 仅检查 HTTPS 地址；HTTP 地址仍可交给系统默认浏览器打开。</p>
+    <p><strong>如何迁移配置？</strong><br>在“设置”中选择导入 Web 版 JSON，或使用商店版的导出与恢复功能。导入前建议先备份。</p>
+    <p><strong>语言如何切换？</strong><br>App 自动跟随 macOS 为此 App 选定的语言，支持简体中文和英文。请在 macOS 设置中更改 App 语言后重启 App；App 内无需额外的语言设置。</p>
+    <p><strong>如何删除全部数据？</strong><br>在“设置”中使用恢复默认入口。执行前请导出需要保留的配置。</p>
+    <h2>隐私</h2>
+    <p>请查看 <a href="privacy.html">KSIC Studio 隐私政策</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'KSIC Studio 支持' : 'KSIC Studio Support';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>

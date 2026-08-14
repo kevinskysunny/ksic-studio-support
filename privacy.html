@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KSIC Studio Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .muted { color: #777; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>KSIC Studio Privacy Policy</h1>
+    <p class="muted">Effective date: August 14, 2026</p>
+    <p>KSIC Studio respects your privacy. This policy explains how the macOS edition of KSIC Studio handles information.</p>
+    <h2>Data we do not collect</h2>
+    <p>KSIC Studio requires no account and contains no advertising, analytics, or tracking SDK. We do not upload your work groups, entries, Recents, or imported files to developer servers.</p>
+    <h2>Local data</h2>
+    <p>The work groups, entries, and Recents you create are stored in the macOS App Sandbox. Resetting the app removes that sandbox data. You can proactively export a backup through the system file picker.</p>
+    <h2>Network access</h2>
+    <p>When you open an entry, KSIC Studio hands its address to your default browser. Only when you manually run a health check does the app directly request the related HTTPS address. The destination website may process information required for that network request according to its own privacy policy. KSIC Studio’s developer does not receive that request data.</p>
+    <h2>File access</h2>
+    <p>Import, export, and restore access only the locations and files you explicitly select through the macOS system file picker.</p>
+    <h2>Changes and contact</h2>
+    <p>We will update this page if the app’s features or data handling changes. For privacy questions, contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>KSIC Studio 隐私政策</h1>
+    <p class="muted">生效日期：2026 年 8 月 14 日</p>
+    <p>KSIC Studio 尊重你的隐私。本政策说明 macOS 版 KSIC Studio 如何处理信息。</p>
+    <h2>我们不收集的数据</h2>
+    <p>KSIC Studio 不要求注册账户，不包含广告、分析或跟踪 SDK，也不会向开发者服务器上传你的分组、入口、最近使用记录或导入文件。</p>
+    <h2>本地数据</h2>
+    <p>你创建的分组、入口和最近使用记录保存在 macOS App Sandbox 中。重置 App 会删除这些沙盒内数据。你也可以通过系统文件选择器主动导出备份。</p>
+    <h2>网络访问</h2>
+    <p>打开入口时，KSIC Studio 将地址交给系统默认浏览器。只有在你主动执行健康检查时，App 才会直接请求对应的 HTTPS 地址；目标网站可能按其自身隐私政策处理网络请求所必需的信息。KSIC Studio 开发者不会接收这些请求数据。</p>
+    <h2>文件访问</h2>
+    <p>导入、导出与恢复仅访问你通过 macOS 系统文件选择器明确选取的位置和文件。</p>
+    <h2>政策变更与联系</h2>
+    <p>如功能或数据处理方式发生变化，本页面会同步更新。如有隐私问题，请联系 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'KSIC Studio 隐私政策' : 'KSIC Studio Privacy Policy';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>
