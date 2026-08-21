@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmoothCast Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .muted { color: #777; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>SmoothCast Privacy Policy</h1>
+    <p class="muted">Effective date: August 21, 2026</p>
+    <p>SmoothCast respects your privacy. This policy explains how the macOS edition of SmoothCast handles information.</p>
+    <h2>Data we do not collect</h2>
+    <p>SmoothCast requires no account and contains no advertising, analytics, or tracking SDK. The developer does not collect or receive your recordings, audio, cursor events, keystroke overlay metadata, exported files, or usage history.</p>
+    <h2>Screen, audio, and input processing</h2>
+    <p>SmoothCast processes the screen and system audio you choose to record. Microphone audio is processed only when you explicitly enable microphone narration. The optional keystroke HUD is disabled by default and processes key labels only during a recording for which you enable it. This information is used solely to create your local recording and visual overlays.</p>
+    <h2>Local files and retention</h2>
+    <p>Recordings and editing metadata are written locally inside the app’s sandbox. Exported videos and GIFs are written only to a location you select through the macOS save panel. SmoothCast does not automatically upload these files. You control retention by deleting the relevant local files or the app’s data.</p>
+    <h2>Purchases and Apple services</h2>
+    <p>In-app purchases and subscription status are processed by Apple through StoreKit. SmoothCast receives only the entitlement status needed to unlock Pro features. Apple handles purchase and account information according to Apple’s privacy policy.</p>
+    <h2>Changes and contact</h2>
+    <p>We will update this page if SmoothCast’s features or data handling changes. For privacy questions, contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>SmoothCast 隐私政策</h1>
+    <p class="muted">生效日期：2026 年 8 月 21 日</p>
+    <p>SmoothCast 尊重你的隐私。本政策说明 macOS 版 SmoothCast 如何处理信息。</p>
+    <h2>我们不收集的数据</h2>
+    <p>SmoothCast 不要求注册账户，不包含广告、分析或跟踪 SDK。开发者不会收集或接收你的录制画面、音频、光标事件、按键提示元数据、导出文件或使用历史。</p>
+    <h2>屏幕、音频与输入处理</h2>
+    <p>SmoothCast 会处理你选择录制的屏幕和系统声音；仅在你主动开启麦克风旁白时处理麦克风音频。按键提示 HUD 默认关闭，仅在你为某次录制主动启用后处理按键标签。这些信息仅用于在本地生成录制内容和视觉提示。</p>
+    <h2>本地文件与保留</h2>
+    <p>录制内容和编辑元数据保存在 App 沙盒内。视频和 GIF 仅导出到你通过 macOS 保存面板选择的位置。SmoothCast 不会自动上传这些文件；你可以通过删除对应本地文件或 App 数据来控制保留时间。</p>
+    <h2>购买与 Apple 服务</h2>
+    <p>App 内购买和订阅状态由 Apple 通过 StoreKit 处理。SmoothCast 仅接收用于解锁 Pro 功能的权益状态；购买与账户信息由 Apple 按其隐私政策处理。</p>
+    <h2>政策变更与联系</h2>
+    <p>如 SmoothCast 的功能或数据处理方式发生变化，本页面会同步更新。如有隐私问题，请联系 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'SmoothCast 隐私政策' : 'SmoothCast Privacy Policy';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>
