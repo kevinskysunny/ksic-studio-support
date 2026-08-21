@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmoothCast Support</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .card { margin: 20px 0; padding: 18px 20px; border: 1px solid #8885; border-radius: 14px; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>SmoothCast Support</h1>
+    <p>SmoothCast is a native, local-first screen recorder and automatic camera-motion studio for macOS.</p>
+    <div class="card">
+      <strong>Contact support</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      Include your macOS version, SmoothCast version, steps to reproduce, and screenshots that contain no private information. We normally reply within three business days.
+    </div>
+    <h2>Frequently asked questions</h2>
+    <p><strong>Why can’t SmoothCast record my screen?</strong><br>Open System Settings → Privacy &amp; Security → Screen Recording, enable SmoothCast, and relaunch the app.</p>
+    <p><strong>When does SmoothCast use the microphone?</strong><br>Only recordings for which you explicitly enable microphone narration request and use microphone access.</p>
+    <p><strong>Does SmoothCast record everything I type?</strong><br>No. The optional keystroke HUD is disabled by default and runs only during a recording you start after enabling it. It creates local overlay labels for the video and does not upload keystroke data.</p>
+    <p><strong>Where are my recordings and exports stored?</strong><br>Recordings and editing metadata stay locally on your Mac. Exports are written only to the location you choose in the macOS save panel.</p>
+    <p><strong>How do I restore SmoothCast Pro?</strong><br>Open the Pro upgrade view and choose Restore Purchases while signed in to the same Apple Account used for the purchase.</p>
+    <h2>Privacy</h2>
+    <p>Read the <a href="privacy.html">SmoothCast Privacy Policy</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>SmoothCast 支持</h1>
+    <p>SmoothCast 是一款原生、本地优先的 macOS 录屏与自动运镜工具。</p>
+    <div class="card">
+      <strong>联系支持</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      请附上 macOS 版本、SmoothCast 版本、复现步骤，以及不含隐私信息的截图。通常会在 3 个工作日内回复。
+    </div>
+    <h2>常见问题</h2>
+    <p><strong>为什么无法录制屏幕？</strong><br>请打开“系统设置 → 隐私与安全性 → 屏幕录制”，允许 SmoothCast 访问，然后重新启动 App。</p>
+    <p><strong>SmoothCast 何时使用麦克风？</strong><br>仅当你在一次录制中主动开启麦克风旁白时，App 才会请求并使用麦克风权限。</p>
+    <p><strong>SmoothCast 会记录我的所有输入吗？</strong><br>不会。按键提示 HUD 默认关闭，仅在你主动启用并开始录制后运行；它只为视频生成本地按键提示，不会上传按键数据。</p>
+    <p><strong>录制与导出文件保存在哪里？</strong><br>录制内容和编辑元数据保存在你的 Mac 本地；导出文件仅写入你在 macOS 保存面板中选择的位置。</p>
+    <p><strong>如何恢复 SmoothCast Pro？</strong><br>请使用购买时的同一 Apple 账户登录，在 Pro 升级页面选择“恢复购买”。</p>
+    <h2>隐私</h2>
+    <p>请查看 <a href="privacy.html">SmoothCast 隐私政策</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'SmoothCast 支持' : 'SmoothCast Support';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>
+
