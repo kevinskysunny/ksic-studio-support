@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PresenterDeck Support</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .card { margin: 20px 0; padding: 18px 20px; border: 1px solid #8885; border-radius: 14px; }
+    .muted { color: #777; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+    kbd { border: 1px solid #8885; border-radius: 6px; padding: 1px 6px; font: inherit; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>PresenterDeck Support</h1>
+    <p>PresenterDeck is a native, local-first presentation companion for macOS: screen annotation, mouse spotlight, presentation timer, and a keystroke HUD.</p>
+    <div class="card">
+      <strong>Contact support</strong><br>
+      <a href="mailto:support@presenterdeck.app">support@presenterdeck.app</a><br>
+      Include your macOS version, PresenterDeck version, steps to reproduce, and screenshots that contain no private information. You can also open an issue at <a href="https://github.com/kevinskysunny/presenter-deck/issues" target="_blank" rel="noopener">github.com/kevinskysunny/presenter-deck</a>.
+    </div>
+    <h2>Frequently asked questions</h2>
+    <div class="card">
+      <strong>How do I activate the screen canvas?</strong><br>
+      Press <kbd>⌥ Option + D</kbd> to toggle the full-screen drawing layer, then pick a pen, laser pointer, arrow, or shape from the toolbar. Use <kbd>⌘ + Z</kbd> to undo and <kbd>⎋ Esc</kbd> to exit.
+    </div>
+    <div class="card">
+      <strong>How do I use the mouse spotlight?</strong><br>
+      Press <kbd>⌥ Option + S</kbd> to dim the background around the cursor. Press <kbd>⌥ Option + S</kbd>, <kbd>⎋ Esc</kbd>, or right-click to exit.
+    </div>
+    <div class="card">
+      <strong>How does the keystroke HUD work?</strong><br>
+      Press <kbd>⌥ Option + K</kbd> to show a floating shortcut HUD. Key combos such as <kbd>⌘ + C</kbd> appear at the bottom of the screen during tutorials and recordings.
+    </div>
+    <div class="card">
+      <strong>How do I use the presentation timer?</strong><br>
+      Press <kbd>⌥ Option + T</kbd> to toggle a floating timer that stays visible without blocking your slides.
+    </div>
+    <div class="card">
+      <strong>Why are Accessibility and Input Monitoring permissions needed?</strong><br>
+      Accessibility enables global hotkeys while presenting over other apps. Input Monitoring powers the optional keystroke HUD. Everything stays local: PresenterDeck is 100% offline and never stores or transmits keystrokes.
+    </div>
+    <h2>Language</h2>
+    <p class="muted">PresenterDeck follows your system language and also offers English / Simplified Chinese switching in Settings.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>PresenterDeck 支持中心</h1>
+    <p>PresenterDeck 是 macOS 原生、本地优先的演示辅助工具：屏幕标注、鼠标聚光灯、演示计时器和按键提示浮层。</p>
+    <div class="card">
+      <strong>联系技术支持</strong><br>
+      <a href="mailto:support@presenterdeck.app">support@presenterdeck.app</a><br>
+      请附上 macOS 版本、PresenterDeck 版本、复现步骤和不含隐私信息的截图。也可以在 <a href="https://github.com/kevinskysunny/presenter-deck/issues" target="_blank" rel="noopener">github.com/kevinskysunny/presenter-deck</a> 提交 Issue。
+    </div>
+    <h2>常见问题</h2>
+    <div class="card">
+      <strong>如何开启屏幕画布？</strong><br>
+      按 <kbd>⌥ Option + D</kbd> 切换全屏绘制图层，然后从工具栏选择画笔、激光笔、箭头或图形。按 <kbd>⌘ + Z</kbd> 撤销，按 <kbd>⎋ Esc</kbd> 退出。
+    </div>
+    <div class="card">
+      <strong>如何使用鼠标聚光灯？</strong><br>
+      按 <kbd>⌥ Option + S</kbd> 暗化光标周围的背景。按 <kbd>⌥ Option + S</kbd>、<kbd>⎋ Esc</kbd> 或右键即可退出。
+    </div>
+    <div class="card">
+      <strong>按键提示浮层如何使用？</strong><br>
+      按 <kbd>⌥ Option + K</kbd> 显示浮动快捷键提示。演示或录屏时，<kbd>⌘ + C</kbd> 等组合键会显示在屏幕底部。
+    </div>
+    <div class="card">
+      <strong>演示计时器如何使用？</strong><br>
+      按 <kbd>⌥ Option + T</kbd> 切换浮动计时器，计时不会遮挡幻灯片内容。
+    </div>
+    <div class="card">
+      <strong>为什么需要辅助功能与输入监控权限？</strong><br>
+      辅助功能用于在其他应用之上演示时启用全局快捷键；输入监控用于可选的按键提示浮层。所有处理都在本机完成：PresenterDeck 100% 离线，绝不存储或上传按键内容。
+    </div>
+    <h2>语言</h2>
+    <p class="muted">PresenterDeck 跟随系统语言，也可在设置中手动切换英文 / 简体中文。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'PresenterDeck 支持中心' : 'PresenterDeck Support';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>

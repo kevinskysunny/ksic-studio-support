@@ -45,6 +45,8 @@
         "zh": "提供聚光灯、屏幕标注、演示计时和按键提示的演示辅助工具。",
         "en": "A presentation companion with Spotlight, annotations, timer, and keystroke hints."
       },
+      "supportUrl": "presenter-deck/support.html",
+      "privacyUrl": "presenter-deck/privacy.html",
       "videos": [
         {
           "id": "feature-demo-bilingual",

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PresenterDeck Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .muted { color: #777; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>PresenterDeck Privacy Policy</h1>
+    <p class="muted">Effective date: August 25, 2026</p>
+    <p>PresenterDeck is a 100% offline macOS presentation utility. This policy explains how the App handles information. In short: we do not collect, track, store, transmit, or monetize any personal data, keystrokes, or screen contents.</p>
+    <h2>1. Zero data collection</h2>
+    <p>PresenterDeck collects no personal data or usage metrics:</p>
+    <p>No user accounts or sign-up. No keystroke logging: the Keystroke HUD renders key labels in memory on screen and discards them immediately. No screen recordings are stored: annotations and overlays are drawn on your display in real time and never saved or transmitted. No analytics or ads: zero telemetry, zero analytics SDKs, and zero third-party trackers.</p>
+    <h2>2. macOS system permissions</h2>
+    <p>PresenterDeck requests the minimum permissions needed to deliver its presentation features:</p>
+    <p>Accessibility, to capture global shortcut keys (for example Option+D, Option+S) while presenting over third-party applications. Input Monitoring, used only by the Keystroke Visualizer to display pressed key combos for tutorial viewers. All permission handling stays local to your Mac under the macOS App Sandbox.</p>
+    <h2>3. Network and cloud policy</h2>
+    <p>PresenterDeck makes zero outbound network requests. It operates entirely offline and has no backend server or cloud dependency.</p>
+    <h2>4. Children's privacy</h2>
+    <p>Because PresenterDeck collects no personal information, it complies fully with COPPA and similar regulations worldwide.</p>
+    <h2>5. Changes to this policy</h2>
+    <p>If the App's features or data handling change, we will update this page and revise the effective date.</p>
+    <h2>6. Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:support@presenterdeck.app">support@presenterdeck.app</a> or open an issue at <a href="https://github.com/kevinskysunny/presenter-deck" target="_blank" rel="noopener">github.com/kevinskysunny/presenter-deck</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>PresenterDeck 隐私政策</h1>
+    <p class="muted">生效日期：2026 年 8 月 25 日</p>
+    <p>PresenterDeck 是一款 100% 离线运行的 macOS 演示辅助工具。本政策说明 App 如何处理信息。简而言之：我们不收集、不追踪、不存储、不上传也不会利用你的任何个人数据、按键内容或屏幕内容。</p>
+    <h2>1. 零数据收集</h2>
+    <p>PresenterDeck 不收集任何个人数据或使用指标：</p>
+    <p>无需注册账号或登录。不记录按键：按键提示浮层仅在内存中渲染按键标签并立即丢弃。不保存屏幕录制内容：标注与悬浮层实时绘制在你的屏幕上，从不保存或上传。无广告、无统计：零遥测、零统计 SDK、零第三方跟踪。</p>
+    <h2>2. macOS 系统权限</h2>
+    <p>PresenterDeck 仅申请实现演示功能所需的最小权限：</p>
+    <p>辅助功能权限，用于在其他应用之上演示时捕获全局快捷键（例如 Option+D、Option+S）。输入监控权限，仅由按键提示器在演示教学时显示按下的组合键。所有权限处理都在 macOS App 沙盒内本机完成。</p>
+    <h2>3. 网络与云策略</h2>
+    <p>PresenterDeck 不会发起任何对外网络请求。它完全离线运行，没有后端服务器或云依赖。</p>
+    <h2>4. 儿童隐私</h2>
+    <p>由于 PresenterDeck 不收集任何个人信息，因此完全符合 COPPA 及全球相关法规。</p>
+    <h2>5. 政策变更</h2>
+    <p>如 App 功能或数据处理方式发生变化，本页面会同步更新并修订生效日期。</p>
+    <h2>6. 联系我们</h2>
+    <p>如有隐私问题，请联系 <a href="mailto:support@presenterdeck.app">support@presenterdeck.app</a>，或在 <a href="https://github.com/kevinskysunny/presenter-deck" target="_blank" rel="noopener">github.com/kevinskysunny/presenter-deck</a> 提交 Issue。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'PresenterDeck 隐私政策' : 'PresenterDeck Privacy Policy';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>
