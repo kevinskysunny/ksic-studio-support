@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25",
+  "apps": [
+    {
+      "id": "ksic-studio",
+      "name": "KSIC Studio",
+      "platform": "macOS",
+      "summary": {
+        "zh": "本地优先的工作入口管理器。",
+        "en": "A local-first work launcher."
+      },
+      "supportUrl": "support.html",
+      "privacyUrl": "privacy.html",
+      "videos": [
+        {
+          "id": "app-review-bilingual",
+          "title": {
+            "zh": "中英文审核演示",
+            "en": "Bilingual review demo"
+          },
+          "playerUrl": "review/",
+          "videoUrl": "review/ksic-studio-review-bilingual.mp4",
+          "language": "zh-Hans / en"
+        }
+      ]
+    },
+    {
+      "id": "smoothcast",
+      "name": "SmoothCast",
+      "platform": "macOS",
+      "summary": {
+        "zh": "面向产品演示与支持场景的屏幕录制工具。",
+        "en": "A screen recorder for product demos and support workflows."
+      },
+      "supportUrl": "smoothcast/support.html",
+      "privacyUrl": "smoothcast/privacy.html",
+      "videos": []
+    },
+    {
+      "id": "presenter-deck",
+      "name": "PresenterDeck",
+      "platform": "macOS",
+      "summary": {
+        "zh": "提供聚光灯、屏幕标注、演示计时和按键提示的演示辅助工具。",
+        "en": "A presentation companion with Spotlight, annotations, timer, and keystroke hints."
+      },
+      "videos": [
+        {
+          "id": "feature-demo-bilingual",
+          "title": {
+            "zh": "功能演示（中英文字幕）",
+            "en": "Feature demo with bilingual captions"
+          },
+          "playerUrl": "presenter-deck/review/",
+          "videoUrl": "media/presenter-deck/presenter-deck-bilingual-demo.mp4",
+          "language": "zh-Hans / en"
+        }
+      ]
+    }
+  ]
+}
