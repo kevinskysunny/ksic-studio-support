@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VolMix Support</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .card { margin: 20px 0; padding: 18px 20px; border: 1px solid #8885; border-radius: 14px; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>VolMix Support</h1>
+    <p>VolMix is a native, local-first utility that gives every app on your Mac its own independent volume and mute control, right from the menu bar.</p>
+    <div class="card">
+      <strong>Contact support</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      Include your macOS version, VolMix version, the app you were controlling, steps to reproduce, and screenshots that contain no private information. We normally reply within three business days.
+    </div>
+    <h2>Frequently asked questions</h2>
+    <p><strong>Why can’t I see an app in the VolMix list?</strong><br>Only apps that are currently running appear in the list. If an app plays audio through a protected or system-level audio path, it may not be adjustable. Try relaunching the app after granting VolMix the audio permission it requests on first launch.</p>
+    <p><strong>Why is there no sound when I lower an app below 100%?</strong><br>Some apps route audio through a process or device that VolMix cannot intercept reliably. Lowering the volume silences their audio path in those cases. A relaunch of the target app or switching its output device usually restores a working mix. If it happens with a specific app, tell us the app name and macOS version so we can reproduce it.</p>
+    <p><strong>Does VolMix record or upload my audio?</strong><br>No. Audio is captured in memory with Apple’s native CoreAudio process-tap technology, mixed locally through a private aggregate device, and never recorded, saved, uploaded, or shared.</p>
+    <p><strong>What apps are supported?</strong><br>Browsers, video players, games, and communication apps that use standard system audio output. Apps with protected audio paths may not be adjustable.</p>
+    <p><strong>How do I switch the app language?</strong><br>Open VolMix from the menu bar, go to Settings, and choose English, Simplified Chinese, or Follow System. The change applies immediately.</p>
+    <p><strong>How do I restore my purchase?</strong><br>Open the purchase screen in VolMix and choose Restore Purchases while signed in to the same Apple Account used for the purchase.</p>
+    <h2>Privacy</h2>
+    <p>Read the <a href="privacy.html">VolMix Privacy Policy</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>VolMix 支持</h1>
+    <p>VolMix 是一款原生、本地优先的 macOS 工具，让你在菜单栏里为 Mac 上的每个 App 独立设置音量和静音。</p>
+    <div class="card">
+      <strong>联系支持</strong><br>
+      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
+      请附上 macOS 版本、VolMix 版本、你正在控制的应用、复现步骤，以及不含隐私信息的截图。通常会在 3 个工作日内回复。
+    </div>
+    <h2>常见问题</h2>
+    <p><strong>为什么列表里看不到某个 App？</strong><br>只有正在运行的 App 会出现在列表里。如果某款应用通过受保护或系统级音频通道播放声音，可能无法调节。首次启动时请允许 VolMix 的音频权限；如仍不显示，可尝试重新启动该应用。</p>
+    <p><strong>为什么把音量调到 100% 以下就没有声音了？</strong><br>部分应用通过 VolMix 无法可靠拦截的进程或设备输出音频，此时调低音量会直接静音其音频通道。重新启动目标应用或切换其输出设备，通常可恢复正常的混音效果。如果特定应用总是这样，请把应用名称和 macOS 版本发给我们以便复现。</p>
+    <p><strong>VolMix 会录制或上传我的音频吗？</strong><br>不会。音频通过 Apple 原生 CoreAudio Process Tap 技术在内存中捕获，在本地通过私有聚合设备混音，绝不会被录制、保存、上传或分享。</p>
+    <p><strong>支持哪些应用？</strong><br>浏览器、视频播放器、游戏以及使用标准系统音频输出的通讯应用。使用受保护音频通道的应用可能无法调节。</p>
+    <p><strong>如何切换 App 语言？</strong><br>点击菜单栏的 VolMix 图标，进入设置，选择“英文”“简体中文”或“跟随系统”，切换即时生效。</p>
+    <p><strong>如何恢复购买？</strong><br>请使用购买时的同一 Apple 账户登录，在 VolMix 的购买页面选择“恢复购买”。</p>
+    <h2>隐私</h2>
+    <p>请查看 <a href="privacy.html">VolMix 隐私政策</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'VolMix 支持' : 'VolMix Support';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>

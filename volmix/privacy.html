@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VolMix Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
+    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
+    h1 { font-size: 34px; letter-spacing: -0.03em; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    .muted { color: #777; }
+    a, button { color: #0a7aff; }
+    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <button id="language" type="button" aria-label="Change language">简体中文</button>
+
+  <main data-language="en">
+    <h1>VolMix Privacy Policy</h1>
+    <p class="muted">Effective date: August 30, 2026</p>
+    <p>VolMix respects your privacy. This policy explains how the macOS edition of VolMix handles information.</p>
+    <h2>Data we do not collect</h2>
+    <p>VolMix requires no account and contains no advertising, analytics, or tracking SDK. The developer does not collect or receive your audio, app names, settings, or usage history.</p>
+    <h2>Audio processing</h2>
+    <p>To apply the volume level you choose, VolMix temporarily captures an app's audio in memory using Apple's native CoreAudio process-tap technology and mixes it locally through a private aggregate device. Captured audio stays on your Mac, is never recorded or saved, and is never uploaded or shared.</p>
+    <h2>Local information</h2>
+    <p>VolMix reads the names and bundle identifiers of running applications so it can show them in its menu bar list. Your preferences (volume levels, language, and toggles) are stored locally on your Mac only.</p>
+    <h2>Purchases and Apple services</h2>
+    <p>The one-time purchase is processed by Apple through StoreKit. VolMix receives only the entitlement status needed to unlock the full version. Apple handles purchase and account information according to Apple's privacy policy.</p>
+    <h2>Changes and contact</h2>
+    <p>We will update this page if VolMix's features or data handling changes. For privacy questions, contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+  </main>
+
+  <main data-language="zh-Hans" hidden>
+    <h1>VolMix 隐私政策</h1>
+    <p class="muted">生效日期：2026 年 8 月 30 日</p>
+    <p>VolMix 尊重你的隐私。本政策说明 macOS 版 VolMix 如何处理信息。</p>
+    <h2>我们不收集的数据</h2>
+    <p>VolMix 不要求注册账户，不包含广告、分析或跟踪 SDK。开发者不会收集或接收你的音频、应用名称、设置或使用历史。</p>
+    <h2>音频处理</h2>
+    <p>为应用你选择的音量，VolMix 会使用 Apple 原生 CoreAudio Process Tap 技术在内存中临时捕获某个 App 的音频，并通过私有聚合设备在本地混音。捕获的音频始终留在你的 Mac 上，绝不会被录制或保存，也绝不会被上传或分享。</p>
+    <h2>本地信息</h2>
+    <p>VolMix 会读取正在运行应用的名称和 Bundle ID，以便在菜单栏列表中显示。你的偏好（音量、语言和开关）仅存储在本地 Mac 上。</p>
+    <h2>购买与 Apple 服务</h2>
+    <p>一次性购买由 Apple 通过 StoreKit 处理。VolMix 仅接收用于解锁完整版的权益状态；购买与账户信息由 Apple 按其隐私政策处理。</p>
+    <h2>政策变更与联系</h2>
+    <p>如 VolMix 的功能或数据处理方式发生变化，本页面会同步更新。如有隐私问题，请联系 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>。</p>
+  </main>
+
+  <script>
+    const button = document.querySelector('#language');
+    const english = document.querySelector('[data-language="en"]');
+    const chinese = document.querySelector('[data-language="zh-Hans"]');
+    function setLanguage(language) {
+      const isChinese = language === 'zh-Hans';
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      document.title = isChinese ? 'VolMix 隐私政策' : 'VolMix Privacy Policy';
+      english.hidden = isChinese;
+      chinese.hidden = !isChinese;
+      button.textContent = isChinese ? 'English' : '简体中文';
+      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
+    }
+    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+  </script>
+</body>
+</html>

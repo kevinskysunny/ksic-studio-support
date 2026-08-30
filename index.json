@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-30",
   "apps": [
     {
       "id": "ksic-studio",
@@ -59,6 +59,18 @@
           "language": "zh-Hans / en"
         }
       ]
+    },
+    {
+      "id": "volmix",
+      "name": "VolMix",
+      "platform": "macOS",
+      "summary": {
+        "zh": "在菜单栏为每个 App 独立设置音量与静音。",
+        "en": "Independent per-app volume and mute control from the menu bar."
+      },
+      "supportUrl": "volmix/support.html",
+      "privacyUrl": "volmix/privacy.html",
+      "videos": []
     }
   ]
 }
