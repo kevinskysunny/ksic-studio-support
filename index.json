@@ -74,8 +74,8 @@
         {
           "id": "volmix-bilingual-demo",
           "title": {
-            "zh": "VolMix 功能演示与审核视频（中英双语）",
-            "en": "VolMix - Native macOS Menu Bar Per-App Audio Mixer Demo"
+            "zh": "VolMix 实机录屏功能演示（联动 B站 Chrome 音乐）",
+            "en": "VolMix - Live macOS Menu Bar Per-App Audio Mixer Demo"
           },
           "playerUrl": "volmix/review/",
           "videoUrl": "media/volmix/volmix-bilingual-demo.mp4",
