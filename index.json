@@ -42,8 +42,8 @@
       "name": "PresenterDeck",
       "platform": "macOS",
       "summary": {
-        "zh": "提供聚光灯、屏幕标注、演示计时和按键提示的演示辅助工具。",
-        "en": "A presentation companion with Spotlight, annotations, timer, and keystroke hints."
+        "zh": "专为演讲者打造的分章节议程规划、秒级排练复盘与演示流程台工具。",
+        "en": "A native macOS presentation runbook for section-by-section agenda planning, rehearsal review, and live presentation control."
       },
       "supportUrl": "presenter-deck/support.html",
       "privacyUrl": "presenter-deck/privacy.html",
@@ -51,8 +51,8 @@
         {
           "id": "feature-demo-bilingual",
           "title": {
-            "zh": "功能演示（中英文字幕）",
-            "en": "Feature demo with bilingual captions"
+            "zh": "1.1.0 功能演示与排练复盘（中英双语字幕）",
+            "en": "1.1.0 Feature Demo & Rehearsal Review (Bilingual)"
           },
           "playerUrl": "presenter-deck/review/",
           "videoUrl": "media/presenter-deck/presenter-deck-bilingual-demo.mp4",

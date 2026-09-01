@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PresenterDeck bilingual feature demo">
-  <title>PresenterDeck 功能演示 · Feature Demo</title>
+  <meta name="description" content="PresenterDeck 1.1.0 bilingual feature demo & rehearsal review">
+  <title>PresenterDeck 1.1.0 功能演示 · Feature Demo</title>
   <style>
     :root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
     body { margin: 0; min-height: 100vh; background: #080a0f; color: #f6f8fc; }
@@ -13,18 +13,39 @@
     h1 { margin: 28px 0 8px; font-size: clamp(28px, 5vw, 48px); letter-spacing: -.035em; }
     p { margin: 0 0 22px; color: #aab4c4; }
     video { display: block; width: 100%; height: auto; border: 1px solid #263044; border-radius: 16px; background: #000; box-shadow: 0 24px 80px #0008; }
-    .download { display: inline-block; margin-top: 18px; color: #91b5ff; }
+    .actions { display: flex; gap: 20px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+    .download { color: #91b5ff; text-decoration: none; }
+    .download:hover { text-decoration: underline; }
+    .features { margin-top: 32px; padding: 20px 24px; border: 1px solid #1f2738; border-radius: 12px; background: #0e131d; }
+    .features h2 { margin: 0 0 12px; font-size: 18px; color: #e2e8f0; }
+    .features ul { margin: 0; padding-left: 20px; color: #94a3b8; line-height: 1.7; }
   </style>
 </head>
 <body>
   <main>
     <nav><a href="../../">← 应用视频库 / App video library</a></nav>
-    <h1>PresenterDeck 功能演示</h1>
-    <p>Feature demo with Chinese and English captions</p>
-    <video controls playsinline preload="metadata">
+    <h1>PresenterDeck 演示流程台 · 功能演示</h1>
+    <p>PresenterDeck 1.1.0 Feature Demo & Rehearsal Review with Bilingual Captions</p>
+    <video controls playsinline preload="metadata" poster="../../media/presenter-deck/poster.png">
+      <source src="1.1.0_review.mp4" type="video/mp4">
       <source src="../../media/presenter-deck/presenter-deck-bilingual-demo.mp4" type="video/mp4">
     </video>
-    <a class="download" href="../../media/presenter-deck/presenter-deck-bilingual-demo.mp4" download>下载视频 / Download MP4</a>
+    <div class="actions">
+      <a class="download" href="1.1.0_review.mp4" download>下载演示视频 / Download MP4 (1.1.0_review.mp4)</a>
+      <a class="download" href="../../media/presenter-deck/presenter-deck-bilingual-demo.mp4" download>备用源下载 / Mirror Download</a>
+    </div>
+    <div class="features">
+      <h2>分镜与核心演示内容 (Storyboard & Highlights)</h2>
+      <ul>
+        <li><strong>01 · 演示流程台议程规划 (00:00 - 00:06)</strong>：分章节预设目标时长与名称，结构化演示准备。</li>
+        <li><strong>02 · 秒级排练控制 (00:06 - 00:16)</strong>：支持实时倒计时、暂停/继续与平滑切换下一章节。</li>
+        <li><strong>03 · 顶部刘海演讲者控制栏 (00:16 - 00:22)</strong>：演示时无需切换窗口，顶部刘海直观掌控时间与进度。</li>
+        <li><strong>04 · 本地排练复盘报告 (00:22 - 00:32)</strong>：逐段对比计划用时与实际耗时，秒级超时差异分析，数据仅存本机。</li>
+        <li><strong>05 · 屏幕画布 Option+D (00:32 - 00:38)</strong>：全局画笔、箭头与图形框选重点。</li>
+        <li><strong>06 · 鼠标聚光灯 Option+S (00:38 - 00:44)</strong>：高透跟随光圈与全局柔和暗化，引导观众注意力。</li>
+        <li><strong>07 · 原生离线隐私 (00:44 - 00:48)</strong>：100% 本地离线运行，零云端上传，专为专业演讲者打造。</li>
+      </ul>
+    </div>
   </main>
 </body>
 </html>
