@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-09-02",
   "apps": [
     {
       "id": "ksic-studio",
@@ -65,12 +65,23 @@
       "name": "VolMix",
       "platform": "macOS",
       "summary": {
-        "zh": "在菜单栏为每个 App 独立设置音量与静音。",
-        "en": "Independent per-app volume and mute control from the menu bar."
+        "zh": "常驻 macOS 菜单栏的原生独立应用音量调音台。支持单 App 独立音量调节、一键静音、实时发声指示与主输出设备切换。现已正式上架 Mac App Store！",
+        "en": "Native macOS Menu Bar Per-App Audio Mixer. Individual app volume control, mute, live VU meters, and output switching. Now available on Mac App Store!"
       },
-      "supportUrl": "volmix/support.html",
-      "privacyUrl": "volmix/privacy.html",
-      "videos": []
+      "supportUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/support.html",
+      "privacyUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/privacy.html",
+      "videos": [
+        {
+          "id": "volmix-bilingual-demo",
+          "title": {
+            "zh": "VolMix 官方实机演示视频（中英双语字幕）",
+            "en": "VolMix - Official macOS Per-App Audio Mixer Demo (Live Playback)"
+          },
+          "playerUrl": "volmix/review/",
+          "videoUrl": "media/volmix/volmix-bilingual-demo.mp4",
+          "language": "zh-Hans / en"
+        }
+      ]
     }
   ]
 }
