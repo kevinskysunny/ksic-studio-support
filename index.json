@@ -65,8 +65,8 @@
       "name": "VolMix",
       "platform": "macOS",
       "summary": {
-        "zh": "常驻 macOS 菜单栏的原生独立应用音量调音台。支持单 App 独立音量调节、一键静音、实时发声指示与主输出设备切换。现已正式上架 Mac App Store！",
-        "en": "Native macOS Menu Bar Per-App Audio Mixer. Individual app volume control, mute, live VU meters, and output switching. Now available on Mac App Store!"
+        "zh": "常驻 macOS 菜单栏的原生单应用调音台。支持 Apple Music 单独调音、一键瞬时静音、实时发声指示与主输出设备联动。",
+        "en": "Native macOS Menu Bar Per-App Audio Mixer. Control Apple Music volume independently, one-click instant mute, and live VU meters."
       },
       "supportUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/support.html",
       "privacyUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/privacy.html",
@@ -79,6 +79,16 @@
           },
           "playerUrl": "volmix/review/",
           "videoUrl": "media/volmix/volmix-bilingual-demo.mp4",
+          "language": "zh-Hans / en"
+        },
+        {
+          "id": "volmix-tiktok-demo",
+          "title": {
+            "zh": "VolMix 官方演示（Apple Music 独立调音与静音联动）",
+            "en": "VolMix - TikTok Demo (Apple Music Integration)"
+          },
+          "playerUrl": "volmix/review/",
+          "videoUrl": "media/volmix/volmix-tiktok-demo.mp4",
           "language": "zh-Hans / en"
         }
       ]
