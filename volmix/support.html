@@ -3,74 +3,150 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:,">
   <title>VolMix Support</title>
   <style>
-    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
-    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
-    h1 { font-size: 34px; letter-spacing: -0.03em; }
-    h2 { margin-top: 32px; font-size: 20px; }
-    .card { margin: 20px 0; padding: 18px 20px; border: 1px solid #8885; border-radius: 14px; }
-    a, button { color: #0a7aff; }
-    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
-    [hidden] { display: none; }
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --ink:#18212d; --muted:#536174; --line:#d4dbe5; --surface:#f4f7fb; --link:#0758c5; background:#fff; color:var(--ink); }
+    * { box-sizing:border-box; }
+    body { margin:0 auto; max-width:820px; padding:32px 24px 56px; line-height:1.75; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:20px; }
+    .brand { font-size:20px; font-weight:700; text-decoration:none; color:var(--ink); }
+    label { margin-right:6px; font-size:14px; }
+    select { max-width:100%; font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:7px 10px; }
+    h1 { font-size:clamp(28px,5vw,38px); line-height:1.2; letter-spacing:-.025em; margin:36px 0 18px; }
+    h2 { margin-top:30px; font-size:21px; line-height:1.4; }
+    p, li { overflow-wrap:anywhere; }
+    li + li { margin-top:7px; }
+    a { color:var(--link); text-underline-offset:3px; }
+    a:focus-visible, select:focus-visible { outline:3px solid var(--link); outline-offset:4px; }
+    .card { padding:18px 20px; background:var(--surface); border:1px solid var(--line); border-radius:12px; }
+    .card p { margin:8px 0 0; }
+    .muted, footer { color:var(--muted); }
+    footer { border-top:1px solid var(--line); margin-top:40px; padding-top:20px; font-size:14px; }
+    .skip { position:absolute; left:-10000px; }
+    .skip:focus { position:static; }
+    [hidden] { display:none !important; }
+    @media (max-width:480px) { body { padding:22px 18px 40px; } .card { padding:16px; } }
+    @media (prefers-color-scheme:dark) { :root { --ink:#edf2f8; --muted:#b4c0d0; --line:#425064; --surface:#202a38; --link:#80b6ff; background:#121922; } }
   </style>
 </head>
 <body>
-  <button id="language" type="button" aria-label="Change language">简体中文</button>
-
-  <main data-language="en">
-    <h1>VolMix Support</h1>
-    <p>VolMix is a native, local-first utility that gives every app on your Mac its own independent volume and mute control, right from the menu bar.</p>
-    <div class="card">
-      <strong>Contact support</strong><br>
-      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
-      Include your macOS version, VolMix version, the app you were controlling, steps to reproduce, and screenshots that contain no private information. We normally reply within three business days.
+  <a class="skip" href="#content">Skip to content</a>
+  <header>
+    <a class="brand" href="support.html" aria-label="VolMix">VolMix</a>
+    <div id="language-control" hidden>
+      <label id="language-label" for="language">Language</label>
+      <select id="language">
+        <option value="system">Follow System (Automatic)</option>
+        <option value="en">English</option>
+        <option value="zh-Hans">简体中文</option>
+      </select>
     </div>
-    <h2>Frequently asked questions</h2>
-    <p><strong>Why can’t I see an app in the VolMix list?</strong><br>Only apps that are currently running appear in the list. If an app plays audio through a protected or system-level audio path, it may not be adjustable. Try relaunching the app after granting VolMix the audio permission it requests on first launch.</p>
-    <p><strong>Why is there no sound when I lower an app below 100%?</strong><br>Some apps route audio through a process or device that VolMix cannot intercept reliably. Lowering the volume silences their audio path in those cases. A relaunch of the target app or switching its output device usually restores a working mix. If it happens with a specific app, tell us the app name and macOS version so we can reproduce it.</p>
-    <p><strong>Does VolMix record or upload my audio?</strong><br>No. Audio is captured in memory with Apple’s native CoreAudio process-tap technology, mixed locally through a private aggregate device, and never recorded, saved, uploaded, or shared.</p>
-    <p><strong>What apps are supported?</strong><br>Browsers, video players, games, and communication apps that use standard system audio output. Apps with protected audio paths may not be adjustable.</p>
-    <p><strong>How do I switch the app language?</strong><br>Open VolMix from the menu bar, go to Settings, and choose English, Simplified Chinese, or Follow System. The change applies immediately.</p>
-    <p><strong>How do I restore my purchase?</strong><br>Open the purchase screen in VolMix and choose Restore Purchases while signed in to the same Apple Account used for the purchase.</p>
-    <h2>Privacy</h2>
-    <p>Read the <a href="privacy.html">VolMix Privacy Policy</a>.</p>
+  </header>
+  <main id="content">
+    <section data-language="en" lang="en">
+      <h1>VolMix Support</h1>
+      <p>Independent volume and mute controls for detected audio apps, right in your Mac menu bar. Requires macOS 14.2 or later.</p>
+      <div class="card">
+        <strong>Contact support</strong>
+        <p><a href="mailto:kssicstudio@gmail.com?subject=VolMix%20Support">kssicstudio@gmail.com</a></p>
+        <p>Include your macOS version, VolMix version (Preferences → About), source app, output device, and steps to reproduce. If you share a screenshot, remove personal information first. Do not send audio recordings unless needed for your request and you choose to share them.</p>
+      </div>
+      <h2>Where is the app window?</h2>
+      <p>VolMix lives in the menu bar and does not show a Dock icon. Click its slider icon at the top-right of your screen to open the mixer. The gear button opens Preferences; the power button quits VolMix.</p>
+      <h2>How do I get started?</h2>
+      <ol>
+        <li>Play ordinary, unprotected audio in an app and open VolMix from the menu bar.</li>
+        <li>Lower that app's slider below 100% or click its mute button.</li>
+        <li>Allow the system-audio capture permission requested by macOS. Audio processing stays on your Mac.</li>
+      </ol>
+      <h2>Why is an app missing or not adjustable?</h2>
+      <p>Start playback so macOS exposes its audio process. Protected audio, unusual routing, and some output devices may not support per-app control. Try an unprotected local file with the Mac's built-in speakers to check your setup. VolMix controls apps, not individual browser tabs, and does not amplify audio above 100%.</p>
+      <h2>What if I denied audio permission?</h2>
+      <p>Open System Settings → Privacy &amp; Security and locate the screen/system-audio recording permission section; the name varies with macOS. Enable VolMix and relaunch it if macOS requests this. The permission is used to adjust app audio, not to capture screen images or microphone input.</p>
+      <h2>What if an app becomes silent or sounds distorted?</h2>
+      <p>Return its VolMix slider to 100% and unmute both the app and the master output. Confirm the source app is playing and the expected output device is selected. If the problem continues, quit VolMix using its power button to release its audio processing, then check playback again. Send the app, device, macOS version, and any displayed error to support.</p>
+      <h2>Does output switching work for each app?</h2>
+      <p>The device selector changes the system output device. It does not route different apps to different devices. Master volume and mute depend on the device's software-control support; some digital outputs require volume adjustment on the hardware.</p>
+      <h2>How do I change the language?</h2>
+      <p>Open Preferences → General and choose English, 简体中文, or Follow System. The app changes language immediately and remembers your choice. This website has its own language selector above.</p>
+      <h2>Is there a subscription or a restore-purchase button?</h2>
+      <p>No. VolMix is a paid-upfront Mac App Store app with no subscription or required in-app purchase. To reinstall it, use the App Store with the Apple Account used for the original purchase. There is no in-app purchase or restore screen.</p>
+      <h2>Does VolMix record or upload audio?</h2>
+      <p>No. Application audio is processed temporarily in memory on your Mac. VolMix does not save recordings or upload audio. See the <a href="privacy.html">VolMix Privacy Policy</a> for local settings, Apple services, support emails, and website information.</p>
+    </section>
+    <section data-language="zh-Hans" lang="zh-Hans">
+      <h1>VolMix 支持</h1>
+      <p>在 Mac 菜单栏里，为检测到的音频应用独立调整音量和静音。需要 macOS 14.2 或更高版本。</p>
+      <div class="card">
+        <strong>联系支持</strong>
+        <p><a href="mailto:kssicstudio@gmail.com?subject=VolMix%20Support">kssicstudio@gmail.com</a></p>
+        <p>请提供 macOS 版本、VolMix 版本（设置 → 关于）、播放声音的应用、输出设备和复现步骤。发送截图前请移除个人信息；除非问题处理需要且你愿意提供，请勿发送音频录制。</p>
+      </div>
+      <h2>为什么看不到应用窗口？</h2>
+      <p>VolMix 常驻菜单栏，不显示程序坞图标。点击屏幕右上方菜单栏里的滑杆图标打开调音台，底部齿轮按钮打开设置，电源按钮退出 VolMix。</p>
+      <h2>如何开始使用？</h2>
+      <ol>
+        <li>让一个应用播放普通、未受保护的音频，再从菜单栏打开 VolMix。</li>
+        <li>将该应用的滑块调至 100% 以下，或点击它的静音按钮。</li>
+        <li>允许 macOS 请求的系统音频捕获权限。音频始终在本机处理。</li>
+      </ol>
+      <h2>为什么找不到某个应用，或无法调整它？</h2>
+      <p>先开始播放，让 macOS 能检测到其音频进程。受保护音频、特殊音频路由和部分输出设备可能不支持独立控制。可先用 Mac 内置扬声器播放未受保护的本地文件检查设置。VolMix 按应用控制，不单独控制浏览器标签页，也不提供超过 100% 的音量放大。</p>
+      <h2>之前拒绝了音频权限怎么办？</h2>
+      <p>打开“系统设置 → 隐私与安全性”，找到屏幕或系统音频录制权限项目；具体名称随 macOS 版本变化。启用 VolMix，如系统要求则重新启动应用。此权限用于调整应用音频，不用于捕获屏幕图像或麦克风输入。</p>
+      <h2>如果应用突然无声或声音失真怎么办？</h2>
+      <p>先将其 VolMix 音量恢复为 100%，并取消应用和主输出的静音。确认源应用正在播放，且已选择正确的输出设备。如仍有问题，点击电源按钮退出 VolMix，释放其音频处理后再检查播放。请把应用、设备、macOS 版本及界面显示的错误发给支持。</p>
+      <h2>能为不同应用分别选择输出设备吗？</h2>
+      <p>设备选择器更改系统输出设备，不会把不同应用分别送到不同设备。主音量和静音功能取决于设备是否支持软件控制；部分数字输出需要在硬件上调节音量。</p>
+      <h2>如何切换语言？</h2>
+      <p>打开“设置 → 通用”，选择“简体中文”“English”或“跟随系统”。切换即时生效并保存。本网站顶部的语言选择器单独控制网站语言。</p>
+      <h2>需要订阅或在应用里恢复购买吗？</h2>
+      <p>不需要。VolMix 在 Mac App Store 一次付费下载，无需订阅或应用内购买。重新安装时，请在 App Store 使用最初购买的 Apple 账户重新下载。VolMix 内没有购买或恢复购买页面。</p>
+      <h2>VolMix 会录制或上传音频吗？</h2>
+      <p>不会。应用音频只在 Mac 内存中临时处理，不保存录制，也不上传音频。本地设置、Apple 服务、支持邮件和网站信息的处理方式见 <a href="privacy.html">VolMix 隐私政策</a>。</p>
+    </section>
   </main>
-
-  <main data-language="zh-Hans" hidden>
-    <h1>VolMix 支持</h1>
-    <p>VolMix 是一款原生、本地优先的 macOS 工具，让你在菜单栏里为 Mac 上的每个 App 独立设置音量和静音。</p>
-    <div class="card">
-      <strong>联系支持</strong><br>
-      <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a><br>
-      请附上 macOS 版本、VolMix 版本、你正在控制的应用、复现步骤，以及不含隐私信息的截图。通常会在 3 个工作日内回复。
-    </div>
-    <h2>常见问题</h2>
-    <p><strong>为什么列表里看不到某个 App？</strong><br>只有正在运行的 App 会出现在列表里。如果某款应用通过受保护或系统级音频通道播放声音，可能无法调节。首次启动时请允许 VolMix 的音频权限；如仍不显示，可尝试重新启动该应用。</p>
-    <p><strong>为什么把音量调到 100% 以下就没有声音了？</strong><br>部分应用通过 VolMix 无法可靠拦截的进程或设备输出音频，此时调低音量会直接静音其音频通道。重新启动目标应用或切换其输出设备，通常可恢复正常的混音效果。如果特定应用总是这样，请把应用名称和 macOS 版本发给我们以便复现。</p>
-    <p><strong>VolMix 会录制或上传我的音频吗？</strong><br>不会。音频通过 Apple 原生 CoreAudio Process Tap 技术在内存中捕获，在本地通过私有聚合设备混音，绝不会被录制、保存、上传或分享。</p>
-    <p><strong>支持哪些应用？</strong><br>浏览器、视频播放器、游戏以及使用标准系统音频输出的通讯应用。使用受保护音频通道的应用可能无法调节。</p>
-    <p><strong>如何切换 App 语言？</strong><br>点击菜单栏的 VolMix 图标，进入设置，选择“英文”“简体中文”或“跟随系统”，切换即时生效。</p>
-    <p><strong>如何恢复购买？</strong><br>请使用购买时的同一 Apple 账户登录，在 VolMix 的购买页面选择“恢复购买”。</p>
-    <h2>隐私</h2>
-    <p>请查看 <a href="privacy.html">VolMix 隐私政策</a>。</p>
-  </main>
-
+  <footer>© 2026 Ksic Studio · VolMix</footer>
   <script>
-    const button = document.querySelector('#language');
-    const english = document.querySelector('[data-language="en"]');
-    const chinese = document.querySelector('[data-language="zh-Hans"]');
-    function setLanguage(language) {
-      const isChinese = language === 'zh-Hans';
-      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
-      document.title = isChinese ? 'VolMix 支持' : 'VolMix Support';
-      english.hidden = isChinese;
-      chinese.hidden = !isChinese;
-      button.textContent = isChinese ? 'English' : '简体中文';
-      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
-    }
-    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
-    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
+    (() => {
+      const key = 'volmixSiteLanguage';
+      const selector = document.querySelector('#language');
+      const label = document.querySelector('#language-label');
+      const systemOption = selector.querySelector('[value="system"]');
+      const allowed = ['system', 'en', 'zh-Hans'];
+      let preference = 'system';
+      try {
+        const stored = localStorage.getItem(key);
+        if (allowed.includes(stored)) preference = stored;
+      } catch (_) { /* The pages also work when browser storage is blocked. */ }
+      const requested = new URLSearchParams(location.search).get('lang');
+      if (allowed.includes(requested)) preference = requested;
+      function render() {
+        const browserLanguage = (navigator.languages?.[0] || navigator.language || 'en').toLowerCase();
+        const language = preference === 'system' ? (browserLanguage.startsWith('zh') ? 'zh-Hans' : 'en') : preference;
+        const chinese = language === 'zh-Hans';
+        document.documentElement.lang = language;
+        document.querySelectorAll('[data-language]').forEach(section => { section.hidden = section.dataset.language !== language; });
+        document.title = document.querySelector('[data-language="' + language + '"] h1').textContent;
+        label.textContent = chinese ? '语言' : 'Language';
+        systemOption.textContent = chinese ? '跟随系统（自动）' : 'Follow System (Automatic)';
+        document.querySelector('.skip').textContent = chinese ? '跳转到正文' : 'Skip to content';
+        selector.value = preference;
+        document.querySelector('#language-control').hidden = false;
+      }
+      selector.addEventListener('change', () => {
+        preference = selector.value;
+        try { localStorage.setItem(key, preference); } catch (_) {}
+        const address = new URL(location.href);
+        address.searchParams.delete('lang');
+        history.replaceState(null, '', address);
+        render();
+      });
+      window.addEventListener('languagechange', () => { if (preference === 'system') render(); });
+      render();
+    })();
   </script>
 </body>
 </html>
