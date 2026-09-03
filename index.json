@@ -35,7 +35,18 @@
       },
       "supportUrl": "smoothcast/support.html",
       "privacyUrl": "smoothcast/privacy.html",
-      "videos": []
+      "videos": [
+        {
+          "id": "smoothcast-1-1-0-guide-package-bilingual",
+          "title": {
+            "zh": "SmoothCast 1.1.0 教程资料包工作流（中英双语字幕）",
+            "en": "SmoothCast 1.1.0 Guide Package Workflow (Bilingual)"
+          },
+          "playerUrl": "smoothcast/review/",
+          "videoUrl": "media/smoothcast/smoothcast-1.1.0-guide-package-bilingual.mp4",
+          "language": "zh-Hans / en"
+        }
+      ]
     },
     {
       "id": "presenter-deck",
