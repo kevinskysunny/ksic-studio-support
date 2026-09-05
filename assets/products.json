@@ -36,10 +36,10 @@
     "support": "volmix/support.html",
     "privacy": "volmix/privacy.html",
     "demo": "volmix/review/",
-    "store": "https://apps.apple.com/us/app/volmix-per-app-volume/id6806717830?mt=12",
+    "store": "https://apps.apple.com/us/app/volmix-per-app-volume/id6806717830?mt=12&ct=ksic_website",
     "version": "1.1.6",
     "os": "14.2",
-    "nativeStore": "macappstores://apps.apple.com/app/id6806717830?mt=12"
+    "nativeStore": "macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website"
   },
   {
     "id": "networkconsole-lite",
@@ -78,10 +78,10 @@
     "support": "networkconsole-lite/support.html",
     "privacy": "networkconsole-lite/privacy.html",
     "demo": null,
-    "store": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12",
+    "store": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12&ct=ksic_website",
     "version": "1.0",
     "os": "14.0",
-    "nativeStore": "macappstores://apps.apple.com/app/id6801707344?mt=12"
+    "nativeStore": "macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website"
   },
   {
     "id": "ksic-studio",
@@ -120,10 +120,10 @@
     "support": "support.html",
     "privacy": "privacy.html",
     "demo": "review/",
-    "store": "https://apps.apple.com/us/app/ksic-studio/id6801325655?mt=12",
+    "store": "https://apps.apple.com/us/app/ksic-studio/id6801325655?mt=12&ct=ksic_website",
     "version": "1.0.0",
     "os": "14.0",
-    "nativeStore": "macappstores://apps.apple.com/app/id6801325655?mt=12"
+    "nativeStore": "macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website"
   },
   {
     "id": "ie-compat-bridge",
@@ -162,7 +162,7 @@
     "support": "https://ie-compat-bridge.kssicstudio.com/",
     "privacy": "https://ie-compat-bridge.kssicstudio.com/privacy",
     "demo": null,
-    "store": "https://chromewebstore.google.com/detail/ie-compat-bridge/blaopiiafdfificalgbkjnljbhmjojpa",
+    "store": "https://chromewebstore.google.com/detail/ie-compat-bridge/blaopiiafdfificalgbkjnljbhmjojpa?utm_source=ksic_website&utm_medium=support_portal",
     "version": "0.6.0",
     "os": "macOS & Windows",
     "nativeStore": "https://ie-compat-bridge.kssicstudio.com/"
