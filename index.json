@@ -25,7 +25,7 @@
         }
       ],
       "productUrl": "ksic-studio/",
-      "appStoreUrl": "https://apps.apple.com/cn/app/ksic-studio/id6801325655?mt=12",
+      "appStoreUrl": "https://apps.apple.com/us/app/ksic-studio/id6801325655?mt=12",
       "availability": "available",
       "verifiedAt": "2026-09-05",
       "version": "1.0.0"
@@ -109,7 +109,7 @@
         }
       ],
       "productUrl": "volmix/",
-      "appStoreUrl": "https://apps.apple.com/cn/app/volmix/id6806717830?mt=12",
+      "appStoreUrl": "https://apps.apple.com/us/app/volmix-per-app-volume/id6806717830?mt=12",
       "availability": "available",
       "verifiedAt": "2026-09-05",
       "version": "1.1.6"
@@ -126,11 +126,11 @@
       "supportUrl": "networkconsole-lite/support.html",
       "privacyUrl": "networkconsole-lite/privacy.html",
       "productUrl": "networkconsole-lite/",
-      "appStoreUrl": "https://apps.apple.com/cn/app/networkconsole-lite/id6801707344?mt=12",
+      "appStoreUrl": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12",
       "availability": "available",
       "verifiedAt": "2026-09-05",
       "version": "1.0"
     }
   ],
-  "siteVersion": "1.1.1"
+  "siteVersion": "1.1.2"
 }
