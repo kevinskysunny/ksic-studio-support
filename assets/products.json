@@ -1,0 +1,125 @@
+[
+  {
+    "id": "volmix",
+    "name": "VolMix",
+    "mark": "VM",
+    "tag": [
+      "Per-app audio",
+      "单应用音量"
+    ],
+    "headline": [
+      "Control one app’s sound.",
+      "单独调整一个应用的声音。"
+    ],
+    "summary": [
+      "Adjust volume and mute for detected audio apps from your Mac menu bar.",
+      "在 Mac 菜单栏中，为检测到的音频应用独立调音或静音。"
+    ],
+    "features": [
+      [
+        "Independent volume from 0% to 100%",
+        "0%–100% 独立音量调节"
+      ],
+      [
+        "App mute and live audio indicators",
+        "应用静音与实时发声指示"
+      ],
+      [
+        "System output selection in the same panel",
+        "在同一面板选择系统输出设备"
+      ]
+    ],
+    "limits": [
+      "Requires system-audio capture permission. Protected audio and some routing or devices may not work. Controls apps, not browser tabs; no amplification above 100% or per-app output routing.",
+      "需要系统音频捕获权限。受保护音频、部分路由或设备可能不兼容。按应用而非浏览器标签页控制；不支持超过 100% 放大或按应用分配输出设备。"
+    ],
+    "support": "volmix/support.html",
+    "privacy": "volmix/privacy.html",
+    "demo": "volmix/review/",
+    "store": "https://apps.apple.com/app/id6806717830",
+    "version": "1.1.6",
+    "os": "14.2"
+  },
+  {
+    "id": "networkconsole-lite",
+    "name": "NetworkConsole Lite",
+    "mark": "NC",
+    "tag": [
+      "Network checkup",
+      "网络体检"
+    ],
+    "headline": [
+      "Understand your connection.",
+      "看清网络连接的问题。"
+    ],
+    "summary": [
+      "Inspect your Mac’s network state and get practical next steps without changing network settings.",
+      "检查 Mac 网络状态并获取排查建议，不修改网络设置。"
+    ],
+    "features": [
+      [
+        "Wi-Fi, Ethernet, DNS and route information",
+        "Wi-Fi、以太网、DNS 与路由信息"
+      ],
+      [
+        "Internet reachability and local diagnostic history",
+        "互联网连通性与本地诊断时间线"
+      ],
+      [
+        "Export a redacted support package yourself",
+        "主动导出脱敏支持包"
+      ]
+    ],
+    "limits": [
+      "Read-only diagnostics, not automatic repair or a VPN service. Connectivity tests contact public endpoints. Results describe the sampled connection and do not guarantee that every service is reachable.",
+      "仅提供只读诊断，不是自动修复或 VPN 服务。连通性测试会访问公开端点；结果反映采样情况，不保证所有服务均可访问。"
+    ],
+    "support": "networkconsole-lite/support.html",
+    "privacy": "networkconsole-lite/privacy.html",
+    "demo": null,
+    "store": "https://apps.apple.com/app/id6801707344",
+    "version": "1.0",
+    "os": "14.0"
+  },
+  {
+    "id": "ksic-studio",
+    "name": "KSIC Studio",
+    "mark": "KS",
+    "tag": [
+      "Work launcher",
+      "工作入口"
+    ],
+    "headline": [
+      "Keep your work links together.",
+      "把工作入口放在一起。"
+    ],
+    "summary": [
+      "Organize, search and open your websites and work resources from a local-first Mac workspace.",
+      "在本地优先的 Mac 工作空间中整理、搜索和打开网站与工作资源。"
+    ],
+    "features": [
+      [
+        "Group and search your work links",
+        "分组整理和搜索工作链接"
+      ],
+      [
+        "Open recent and featured links from the menu bar",
+        "从菜单栏打开最近和精选链接"
+      ],
+      [
+        "Import configuration and back up your workspace",
+        "导入配置与备份工作空间"
+      ]
+    ],
+    "limits": [
+      "Opens links in your default browser. HTTPS reachability checks run when requested. This is a link launcher, not a cloud sync or team collaboration service.",
+      "链接交给默认浏览器打开，HTTPS 连通性检查由用户主动发起。这是链接启动工具，不是云同步或团队协作服务。"
+    ],
+    "support": "support.html",
+    "privacy": "privacy.html",
+    "demo": "review/",
+    "store": "https://apps.apple.com/app/id6801325655",
+    "version": "1.0.0",
+    "os": "14.0"
+  }
+]

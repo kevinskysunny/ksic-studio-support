@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-05",
   "apps": [
     {
       "id": "ksic-studio",
       "name": "KSIC Studio",
       "platform": "macOS",
       "summary": {
-        "zh": "本地优先的工作入口管理器。",
-        "en": "A local-first work launcher."
+        "en": "Organize, search and open your websites and work resources from a local-first Mac workspace.",
+        "zh": "在本地优先的 Mac 工作空间中整理、搜索和打开网站与工作资源。"
       },
       "supportUrl": "support.html",
       "privacyUrl": "privacy.html",
@@ -23,7 +23,12 @@
           "videoUrl": "review/ksic-studio-review-bilingual.mp4",
           "language": "zh-Hans / en"
         }
-      ]
+      ],
+      "productUrl": "ksic-studio/",
+      "appStoreUrl": "https://apps.apple.com/app/id6801325655",
+      "availability": "available",
+      "verifiedAt": "2026-09-05",
+      "version": "1.0.0"
     },
     {
       "id": "smoothcast",
@@ -76,11 +81,11 @@
       "name": "VolMix",
       "platform": "macOS",
       "summary": {
-        "zh": "常驻 macOS 菜单栏的原生单应用调音台。支持 Apple Music 单独调音、一键瞬时静音、实时发声指示与主输出设备联动。",
-        "en": "Native macOS Menu Bar Per-App Audio Mixer. Control Apple Music volume independently, one-click instant mute, and live VU meters."
+        "en": "Adjust volume and mute for detected audio apps from your Mac menu bar.",
+        "zh": "在 Mac 菜单栏中，为检测到的音频应用独立调音或静音。"
       },
-      "supportUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/support.html",
-      "privacyUrl": "https://kevinskysunny.github.io/ksic-studio-support/volmix/privacy.html",
+      "supportUrl": "volmix/support.html",
+      "privacyUrl": "volmix/privacy.html",
       "videos": [
         {
           "id": "volmix-bilingual-demo",
@@ -102,7 +107,30 @@
           "videoUrl": "media/volmix/volmix-tiktok-demo.mp4",
           "language": "zh-Hans / en"
         }
-      ]
+      ],
+      "productUrl": "volmix/",
+      "appStoreUrl": "https://apps.apple.com/app/id6806717830",
+      "availability": "available",
+      "verifiedAt": "2026-09-05",
+      "version": "1.1.6"
+    },
+    {
+      "id": "networkconsole-lite",
+      "name": "NetworkConsole Lite",
+      "platform": "macOS",
+      "videos": [],
+      "summary": {
+        "en": "Inspect your Mac’s network state and get practical next steps without changing network settings.",
+        "zh": "检查 Mac 网络状态并获取排查建议，不修改网络设置。"
+      },
+      "supportUrl": "networkconsole-lite/support.html",
+      "privacyUrl": "networkconsole-lite/privacy.html",
+      "productUrl": "networkconsole-lite/",
+      "appStoreUrl": "https://apps.apple.com/app/id6801707344",
+      "availability": "available",
+      "verifiedAt": "2026-09-05",
+      "version": "1.0"
     }
-  ]
+  ],
+  "siteVersion": "1.1.0"
 }

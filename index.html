@@ -1,185 +1,168 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="KSIC Studio public app support and video library">
-  <title>App Support & Video Library</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #18202b;
-      --muted: #687386;
-      --line: #dce2ea;
-      --accent: #1769ff;
-      --accent-soft: #eaf1ff;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0c1016;
-        --card: #141a23;
-        --text: #f4f7fb;
-        --muted: #9da8b8;
-        --line: #293343;
-        --accent: #6da0ff;
-        --accent-soft: #182742;
-      }
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); }
-    header, main, footer { width: min(1040px, calc(100% - 40px)); margin-inline: auto; }
-    header { padding: 72px 0 36px; }
-    .eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    h1 { margin: 10px 0 12px; font-size: clamp(36px, 6vw, 64px); line-height: 1.03; letter-spacing: -.045em; }
-    header p { max-width: 680px; color: var(--muted); font-size: 18px; line-height: 1.65; }
-    .toolbar { display: flex; align-items: center; gap: 12px; margin-top: 24px; }
-    button, .button {
-      border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text);
-      padding: 9px 13px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
-    }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; padding-bottom: 64px; }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: 0 16px 40px #0000000d; }
-    .card-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
-    h2 { margin: 0; font-size: 24px; letter-spacing: -.02em; }
-    .platform { border-radius: 999px; background: var(--accent-soft); color: var(--accent); padding: 5px 9px; font-size: 12px; font-weight: 700; }
-    .summary { min-height: 52px; margin: 12px 0 20px; color: var(--muted); line-height: 1.55; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px; }
-    .video-list { margin: 22px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); list-style: none; }
-    .video-list li + li { margin-top: 12px; }
-    .video-link { color: var(--accent); font-weight: 700; text-decoration: none; }
-    .video-link:hover { text-decoration: underline; }
-    .meta, .empty { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
-    footer { border-top: 1px solid var(--line); padding: 22px 0 48px; color: var(--muted); font-size: 13px; }
-    footer a { color: inherit; }
-  </style>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KSIC — Mac app information &amp; support — product information, compatibility and support for macOS apps.">
+<meta name="color-scheme" content="light dark">
+<title>KSIC — Mac app information &amp; support</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js">
+</script>
 </head>
 <body>
-  <header>
-    <div class="eyebrow">Public Support Hub</div>
-    <h1 id="heading">App Support & Video Library</h1>
-    <p id="intro">Browse our apps, support pages, privacy policies, and browser-playable introduction videos.</p>
-    <div class="toolbar">
-      <button id="language" type="button">简体中文</button>
-      <a class="button" href="index.json">View index.json</a>
-    </div>
-  </header>
-
-  <main>
-    <section id="apps" class="grid" aria-live="polite"></section>
-    <noscript>
-      <p>JavaScript is required for the catalog view. Open <a href="index.json">index.json</a> or use these direct links:</p>
-      <ul>
-        <li><a href="review/">KSIC Studio review demo</a></li>
-        <li><a href="presenter-deck/review/">PresenterDeck bilingual feature demo</a></li>
-      </ul>
-    </noscript>
-  </main>
-
-  <footer>
-    Catalog source: <a href="index.json">index.json</a> · Updated <span id="updated">—</span>
-  </footer>
-
-  <script>
-    const copy = {
-      en: {
-        heading: 'App Support & Video Library',
-        intro: 'Browse our apps, support pages, privacy policies, and browser-playable introduction videos.',
-        language: '简体中文', support: 'Support', privacy: 'Privacy', play: 'Play video', empty: 'Introduction video coming soon', index: 'View index.json'
-      },
-      zh: {
-        heading: '应用支持与在线视频库',
-        intro: '统一查看我们的 App、支持页面、隐私政策和可在线播放的介绍视频。',
-        language: 'English', support: '支持', privacy: '隐私政策', play: '播放视频', empty: '介绍视频即将上线', index: '查看 index.json'
-      }
-    };
-    let catalog;
-    let language = navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
-
-    function link(label, href) {
-      const element = document.createElement('a');
-      element.className = 'button';
-      element.href = href;
-      element.textContent = label;
-      return element;
-    }
-
-    function render() {
-      const text = copy[language];
-      document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-      document.title = text.heading;
-      document.querySelector('#heading').textContent = text.heading;
-      document.querySelector('#intro').textContent = text.intro;
-      document.querySelector('#language').textContent = text.language;
-      document.querySelector('.toolbar .button').textContent = text.index;
-      document.querySelector('#updated').textContent = catalog.updatedAt;
-
-      const container = document.querySelector('#apps');
-      container.replaceChildren();
-      for (const app of catalog.apps) {
-        const card = document.createElement('article');
-        card.className = 'card';
-
-        const head = document.createElement('div');
-        head.className = 'card-head';
-        const title = document.createElement('h2');
-        title.textContent = app.name;
-        const platform = document.createElement('span');
-        platform.className = 'platform';
-        platform.textContent = app.platform;
-        head.append(title, platform);
-
-        const summary = document.createElement('p');
-        summary.className = 'summary';
-        summary.textContent = app.summary[language];
-
-        const links = document.createElement('div');
-        links.className = 'links';
-        if (app.supportUrl) links.append(link(text.support, app.supportUrl));
-        if (app.privacyUrl) links.append(link(text.privacy, app.privacyUrl));
-
-        const videos = document.createElement('ul');
-        videos.className = 'video-list';
-        if (!app.videos.length) {
-          const empty = document.createElement('li');
-          empty.className = 'empty';
-          empty.textContent = text.empty;
-          videos.append(empty);
-        }
-        for (const video of app.videos) {
-          const item = document.createElement('li');
-          const anchor = document.createElement('a');
-          anchor.className = 'video-link';
-          anchor.href = video.playerUrl;
-          anchor.textContent = `${text.play} · ${video.title[language]}`;
-          const meta = document.createElement('span');
-          meta.className = 'meta';
-          meta.textContent = video.language;
-          item.append(anchor, meta);
-          videos.append(item);
-        }
-
-        card.append(head, summary, links, videos);
-        container.append(card);
-      }
-    }
-
-    document.querySelector('#language').addEventListener('click', () => {
-      language = language === 'zh' ? 'en' : 'zh';
-      render();
-    });
-
-    fetch('index.json')
-      .then(response => {
-        if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
-        return response.json();
-      })
-      .then(data => { catalog = data; render(); })
-      .catch(error => {
-        document.querySelector('#apps').textContent = error.message;
-      });
-  </script>
+ <a class="skip" href="#main">
+<span data-lang="en">Skip to content</span>
+<span data-lang="zh" lang="zh-Hans">跳转到正文</span>
+</a>
+<header class="bar">
+<a class="brand" href="index.html">KSIC <span> / <span data-lang="en">App support</span>
+<span data-lang="zh" lang="zh-Hans">应用支持</span>
+</span>
+</a>
+<label class="language">
+<span data-lang="en">Language</span>
+<span data-lang="zh" lang="zh-Hans">语言</span> <select id="language" aria-label="Language / 语言">
+<option value="system">Automatic / 跟随系统</option>
+<option value="en">English</option>
+<option value="zh">简体中文</option>
+</select>
+</label>
+</header>
+ <main id="main">
+<section data-lang="en">
+<div class="eyebrow">MACOS / INFORMATION & SUPPORT</div>
+<h1>Your Mac apps.<br>Start here.</h1>
+<p class="lead">Find getting-started guides, compatibility details, privacy policies and App Store information.</p>
+<div class="catalog">
+<article class="product">
+<div class="product-top">
+<span class="monogram color-0" aria-hidden="true">VM</span>
+<span class="eyebrow">Per-app audio</span>
+</div>
+<h2>VolMix</h2>
+<p>Adjust volume and mute for detected audio apps from your Mac menu bar.</p>
+<p class="meta">macOS 14.2+ · v1.1.6</p>
+<div class="actions">
+<a class="button" href="volmix/">Product & getting started</a>
+<a href="https://apps.apple.com/app/id6806717830">View on Mac App Store</a>
+</div>
+</article>
+<article class="product">
+<div class="product-top">
+<span class="monogram color-1" aria-hidden="true">NC</span>
+<span class="eyebrow">Network checkup</span>
+</div>
+<h2>NetworkConsole Lite</h2>
+<p>Inspect your Mac’s network state and get practical next steps without changing network settings.</p>
+<p class="meta">macOS 14.0+ · v1.0</p>
+<div class="actions">
+<a class="button" href="networkconsole-lite/">Product & getting started</a>
+<a href="https://apps.apple.com/app/id6801707344">View on Mac App Store</a>
+</div>
+</article>
+<article class="product">
+<div class="product-top">
+<span class="monogram color-2" aria-hidden="true">KS</span>
+<span class="eyebrow">Work launcher</span>
+</div>
+<h2>KSIC Studio</h2>
+<p>Organize, search and open your websites and work resources from a local-first Mac workspace.</p>
+<p class="meta">macOS 14.0+ · v1.0.0</p>
+<div class="actions">
+<a class="button" href="ksic-studio/">Product & getting started</a>
+<a href="https://apps.apple.com/app/id6801325655">View on Mac App Store</a>
+</div>
+</article>
+</div>
+<section class="help">
+<h2>Download or reinstall</h2>
+<p>These three apps are distributed through the Mac App Store. Open the matching listing on your Mac to purchase, download or update. Pricing, regional availability and current versions are shown by the store. Use your original Apple Account to reinstall.</p>
+</section>
+<section class="more">
+<h2>More support resources</h2>
+<p>Documentation for other apps; inclusion here does not indicate current download availability.</p>
+<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+</section>
+</section>
+<section data-lang="zh" lang="zh-Hans">
+<div class="eyebrow">MACOS / 使用与支持</div>
+<h1>你的 Mac 应用，<br>从这里开始。</h1>
+<p class="lead">查看使用说明、兼容性、隐私政策与 App Store 信息。</p>
+<div class="catalog">
+<article class="product">
+<div class="product-top">
+<span class="monogram color-0" aria-hidden="true">VM</span>
+<span class="eyebrow">单应用音量</span>
+</div>
+<h2>VolMix</h2>
+<p>在 Mac 菜单栏中，为检测到的音频应用独立调音或静音。</p>
+<p class="meta">macOS 14.2+ · v1.1.6</p>
+<div class="actions">
+<a class="button" href="volmix/">使用与产品说明</a>
+<a href="https://apps.apple.com/app/id6806717830">在 Mac App Store 查看</a>
+</div>
+</article>
+<article class="product">
+<div class="product-top">
+<span class="monogram color-1" aria-hidden="true">NC</span>
+<span class="eyebrow">网络体检</span>
+</div>
+<h2>NetworkConsole Lite</h2>
+<p>检查 Mac 网络状态并获取排查建议，不修改网络设置。</p>
+<p class="meta">macOS 14.0+ · v1.0</p>
+<div class="actions">
+<a class="button" href="networkconsole-lite/">使用与产品说明</a>
+<a href="https://apps.apple.com/app/id6801707344">在 Mac App Store 查看</a>
+</div>
+</article>
+<article class="product">
+<div class="product-top">
+<span class="monogram color-2" aria-hidden="true">KS</span>
+<span class="eyebrow">工作入口</span>
+</div>
+<h2>KSIC Studio</h2>
+<p>在本地优先的 Mac 工作空间中整理、搜索和打开网站与工作资源。</p>
+<p class="meta">macOS 14.0+ · v1.0.0</p>
+<div class="actions">
+<a class="button" href="ksic-studio/">使用与产品说明</a>
+<a href="https://apps.apple.com/app/id6801325655">在 Mac App Store 查看</a>
+</div>
+</article>
+</div>
+<section class="help">
+<h2>下载与重新安装</h2>
+<p>这三款应用通过 Mac App Store 分发。点击对应商店入口，在 Mac 上完成购买、下载和更新；价格、地区可用性及最新版本以商店为准。重新安装时请使用原购买 Apple 账户。</p>
+</section>
+<section class="more">
+<h2>更多支持资料</h2>
+<p>以下提供其他应用的文档；此处不表示当前已可下载。</p>
+<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+</section>
+</section>
+</main>
+ <footer>
+<div>
+<a class="" href="index.html">
+<span data-lang="en">All apps</span>
+<span data-lang="zh" lang="zh-Hans">全部应用</span>
+</a> · <a class="" href="website-privacy.html">
+<span data-lang="en">Website privacy</span>
+<span data-lang="zh" lang="zh-Hans">网站隐私</span>
+</a> · <a href="mailto:kssicstudio@gmail.com">
+<span data-lang="en">Contact support</span>
+<span data-lang="zh" lang="zh-Hans">联系支持</span>
+</a>
+</div>
+<p>
+<span data-lang="en">Apple, Mac, macOS and App Store are trademarks of Apple Inc. These independently developed apps are not endorsed by Apple.</span>
+<span data-lang="zh" lang="zh-Hans">Apple、Mac、macOS 与 App Store 为 Apple Inc. 的商标。这些独立开发的应用不代表 Apple 的背书。</span>
+</p>
+<small>
+<span data-lang="en">Site version</span>
+<span data-lang="zh" lang="zh-Hans">网站版本</span> 1.1.0 · 2026-09-05</small>
+</footer>
 </body>
 </html>
