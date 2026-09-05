@@ -38,7 +38,8 @@
     "demo": "volmix/review/",
     "store": "https://apps.apple.com/us/app/volmix-per-app-volume/id6806717830?mt=12",
     "version": "1.1.6",
-    "os": "14.2"
+    "os": "14.2",
+    "nativeStore": "macappstores://apps.apple.com/app/id6806717830?mt=12"
   },
   {
     "id": "networkconsole-lite",
@@ -79,7 +80,8 @@
     "demo": null,
     "store": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12",
     "version": "1.0",
-    "os": "14.0"
+    "os": "14.0",
+    "nativeStore": "macappstores://apps.apple.com/app/id6801707344?mt=12"
   },
   {
     "id": "ksic-studio",
@@ -120,6 +122,7 @@
     "demo": "review/",
     "store": "https://apps.apple.com/us/app/ksic-studio/id6801325655?mt=12",
     "version": "1.0.0",
-    "os": "14.0"
+    "os": "14.0",
+    "nativeStore": "macappstores://apps.apple.com/app/id6801325655?mt=12"
   }
 ]
