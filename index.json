@@ -130,7 +130,24 @@
       "availability": "available",
       "verifiedAt": "2026-09-05",
       "version": "1.0"
+    },
+    {
+      "id": "ie-compat-bridge",
+      "name": "IE Compat Bridge",
+      "platform": "Chrome Extension (macOS & Windows)",
+      "videos": [],
+      "summary": {
+        "en": "Run legacy business and intranet pages in modern Chrome without running a Windows virtual machine.",
+        "zh": "在现代化 Chrome 中流畅运行传统政企办公与内网页面，摆脱笨重的 Windows 虚拟机。"
+      },
+      "supportUrl": "https://ie-compat-bridge.kssicstudio.com/",
+      "privacyUrl": "https://ie-compat-bridge.kssicstudio.com/privacy",
+      "productUrl": "https://ie-compat-bridge.kssicstudio.com/",
+      "appStoreUrl": "https://ie-compat-bridge.kssicstudio.com/",
+      "availability": "available",
+      "verifiedAt": "2026-09-06",
+      "version": "0.6.0"
     }
   ],
-  "siteVersion": "1.1.3"
+  "siteVersion": "1.2.0"
 }
