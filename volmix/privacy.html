@@ -3,74 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VolMix Privacy Policy — data handling and privacy commitments for VolMix for macOS.">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="data:,">
   <title>VolMix Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --ink:#18212d; --muted:#536174; --line:#d4dbe5; --surface:#f4f7fb; --link:#0758c5; background:#fff; color:var(--ink); }
-    * { box-sizing:border-box; }
-    body { margin:0 auto; max-width:820px; padding:32px 24px 56px; line-height:1.75; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:20px; }
-    .brand { font-size:20px; font-weight:700; text-decoration:none; color:var(--ink); }
-    label { margin-right:6px; font-size:14px; }
-    select { max-width:100%; font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:7px 10px; }
-    h1 { font-size:clamp(28px,5vw,38px); line-height:1.2; letter-spacing:-.025em; margin:36px 0 18px; }
-    h2 { margin-top:30px; font-size:21px; line-height:1.4; }
-    p, li { overflow-wrap:anywhere; }
-    li + li { margin-top:7px; }
-    a { color:var(--link); text-underline-offset:3px; }
-    a:focus-visible, select:focus-visible { outline:3px solid var(--link); outline-offset:4px; }
-    .card { padding:18px 20px; background:var(--surface); border:1px solid var(--line); border-radius:12px; }
-    .card p { margin:8px 0 0; }
-    .muted, footer { color:var(--muted); }
-    footer { border-top:1px solid var(--line); margin-top:40px; padding-top:20px; font-size:14px; }
-    .skip { position:absolute; left:-10000px; }
-    .skip:focus { position:static; }
-    [hidden] { display:none !important; }
-    @media (max-width:480px) { body { padding:22px 18px 40px; } .card { padding:16px; } }
-    @media (prefers-color-scheme:dark) { :root { --ink:#edf2f8; --muted:#b4c0d0; --line:#425064; --surface:#202a38; --link:#80b6ff; background:#121922; } }
-  </style>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script defer src="../assets/site.js"></script>
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
-  <header>
-    <a class="brand" href="support.html" aria-label="VolMix">VolMix</a>
-    <div id="language-control" hidden>
-      <label id="language-label" for="language">Language</label>
-      <select id="language">
-        <option value="system">Follow System (Automatic)</option>
+  <a class="skip" href="#main">
+    <span data-lang="en">Skip to content</span>
+    <span data-lang="zh" lang="zh-Hans">跳转到正文</span>
+    <span data-lang="ja" lang="ja">コンテンツへスキップ</span>
+    <span data-lang="ko" lang="ko">본문으로 건너뛰기</span>
+    <span data-lang="de" lang="de">Zum Inhalt springen</span>
+    <span data-lang="fr" lang="fr">Passer au contenu</span>
+    <span data-lang="es" lang="es">Saltar al contenido</span>
+    <span data-lang="pt" lang="pt">Pular para o conteúdo</span>
+  </a>
+
+  <header class="bar">
+    <a class="brand" href="../index.html">KSIC <span> / 
+      <span data-lang="en">VolMix Privacy</span>
+      <span data-lang="zh" lang="zh-Hans">VolMix 隐私政策</span>
+      <span data-lang="ja" lang="ja">VolMix プライバシー</span>
+      <span data-lang="ko" lang="ko">VolMix 개인정보 처리방침</span>
+      <span data-lang="de" lang="de">VolMix Datenschutz</span>
+      <span data-lang="fr" lang="fr">VolMix Confidentialité</span>
+      <span data-lang="es" lang="es">VolMix Privacidad</span>
+      <span data-lang="pt" lang="pt">VolMix Privacidade</span>
+    </span></a>
+    <label class="language">
+      <span data-lang="en">Language</span>
+      <span data-lang="zh" lang="zh-Hans">语言</span>
+      <span data-lang="ja" lang="ja">言語</span>
+      <span data-lang="ko" lang="ko">언어</span>
+      <span data-lang="de" lang="de">Sprache</span>
+      <span data-lang="fr" lang="fr">Langue</span>
+      <span data-lang="es" lang="es">Idioma</span>
+      <span data-lang="pt" lang="pt">Idioma</span>
+      <select id="language" aria-label="Language / 语言">
+        <option value="system">跟随系统 (自动)</option>
         <option value="en">English</option>
-        <option value="zh-Hans">简体中文</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
       </select>
-    </div>
+    </label>
   </header>
-  <main id="content">
-    <section data-language="en" lang="en">
+
+  <main id="main">
+    <section data-lang="en">
+      <a class="back" href="../volmix/index.html">← VolMix</a>
       <h1>VolMix Privacy Policy</h1>
-      <p class="muted">Last updated: August 30, 2026</p>
-      <p>This policy describes information handling in the macOS edition of VolMix, provided by Ksic Studio.</p>
+      <p class="meta">Last updated: August 30, 2026</p>
+      <p class="lead">This policy describes information handling in the macOS edition of VolMix, provided by Ksic Studio.</p>
       <h2>Data handled by the app</h2>
       <p>VolMix does not send your app audio, application list, preferences, or usage activity to the developer. It does not require a VolMix account and contains no advertising, analytics, or tracking SDK.</p>
       <ul>
-        <li>Audio: To apply per-app volume or mute, VolMix uses Apple&#x27;s CoreAudio Process Tap APIs to process application audio temporarily in memory on your Mac. It does not save audio recordings, upload audio, or share audio with the developer or third parties. VolMix does not capture screen images or microphone input.</li>
+        <li>Audio: To apply per-app volume or mute, VolMix uses Apple's CoreAudio Process Tap APIs to process application audio temporarily in memory on your Mac. It does not save audio recordings, upload audio, or share audio with the developer or third parties. VolMix does not capture screen images or microphone input.</li>
         <li>Application and device information: VolMix reads running audio processes, app names and identifiers, and audio output device information to display and control the mixer. This information is used locally.</li>
         <li>Preferences: Per-app volume and mute choices, language, and other preferences are saved locally on your Mac. VolMix does not sync these settings to a developer server. Your own device backup or migration settings may include locally stored preferences.</li>
       </ul>
       <h2>Permission and control</h2>
       <p>macOS may request system-audio recording/capture permission when you use per-app controls. The exact permission name varies with macOS. This access is used only to adjust application audio. You can revoke it in System Settings &gt; Privacy &amp; Security; per-app control will then be unavailable. Quitting VolMix stops its audio processing. Local preferences remain available for the next launch; contact support if you need help removing them.</p>
       <h2>Purchases and Apple services</h2>
-      <p>VolMix is purchased once from the Mac App Store. There is no subscription or in-app purchase required to use its features. Apple processes downloads, purchases, and Apple Account information under Apple&#x27;s own privacy policy. VolMix does not receive your payment card details. Operating-system diagnostics or reports you choose to share with Apple are governed by your Apple settings and Apple&#x27;s policies.</p>
+      <p>VolMix is purchased once from the Mac App Store. There is no subscription or in-app purchase required to use its features. Apple processes downloads, purchases, and Apple Account information under Apple's own privacy policy. VolMix does not receive your payment card details. Operating-system diagnostics or reports you choose to share with Apple are governed by your Apple settings and Apple's policies.</p>
       <h2>Support and website</h2>
       <p>If you choose to email support, we receive your email address and the information you include. We use it to respond to your request and retain it only as needed for support and applicable obligations. You may request deletion by emailing support, subject to any required retention. Please do not send audio recordings or screenshots containing personal information unless needed for your request and you choose to share them.</p>
-      <p>Opening the support or privacy links launches your browser. The website is hosted on GitHub Pages; GitHub processes ordinary website request information under its privacy statement. These pages have no advertising or analytics scripts. They store only your website language preference in your browser. You can remove that preference by clearing this site&#x27;s browser data. This website preference is separate from the app&#x27;s language setting.</p>
+      <p>Opening the support or privacy links launches your browser. The website is hosted on GitHub Pages; GitHub processes ordinary website request information under its privacy statement. These pages have no advertising or analytics scripts. They store only your website language preference in your browser. You can remove that preference by clearing this site's browser data. This website preference is separate from the app's language setting.</p>
       <h2>Changes and contact</h2>
       <p>We update this policy when relevant features or data practices change. For support, privacy questions, or deletion requests about information you sent to support, contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
       <p><a href="support.html">VolMix Support</a> · <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></p>
     </section>
-    <section data-language="zh-Hans" lang="zh-Hans">
+
+    <section data-lang="zh" lang="zh-Hans">
+      <a class="back" href="../volmix/index.html">← VolMix</a>
       <h1>VolMix 隐私政策</h1>
-      <p class="muted">更新日期：2026 年 8 月 30 日</p>
-      <p>本政策说明 Ksic Studio 提供的 macOS 版 VolMix 如何处理信息。</p>
+      <p class="meta">更新日期：2026 年 8 月 30 日</p>
+      <p class="lead">本政策说明 Ksic Studio 提供的 macOS 版 VolMix 如何处理信息。</p>
       <h2>应用处理的数据</h2>
       <p>VolMix 不会将应用音频、应用列表、偏好设置或使用活动发送给开发者。应用无需注册 VolMix 账户，不包含广告、分析或跟踪 SDK。</p>
       <ul>
@@ -90,45 +105,60 @@
       <p><a href="support.html">VolMix 支持</a> · <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a></p>
     </section>
   </main>
-  <footer>© 2026 Ksic Studio · VolMix</footer>
-  <script>
-    (() => {
-      const key = 'volmixSiteLanguage';
-      const selector = document.querySelector('#language');
-      const label = document.querySelector('#language-label');
-      const systemOption = selector.querySelector('[value="system"]');
-      const allowed = ['system', 'en', 'zh-Hans'];
-      let preference = 'system';
-      try {
-        const stored = localStorage.getItem(key);
-        if (allowed.includes(stored)) preference = stored;
-      } catch (_) { /* The pages also work when browser storage is blocked. */ }
-      const requested = new URLSearchParams(location.search).get('lang');
-      if (allowed.includes(requested)) preference = requested;
-      function render() {
-        const browserLanguage = (navigator.languages?.[0] || navigator.language || 'en').toLowerCase();
-        const language = preference === 'system' ? (browserLanguage.startsWith('zh') ? 'zh-Hans' : 'en') : preference;
-        const chinese = language === 'zh-Hans';
-        document.documentElement.lang = language;
-        document.querySelectorAll('[data-language]').forEach(section => { section.hidden = section.dataset.language !== language; });
-        document.title = document.querySelector('[data-language="' + language + '"] h1').textContent;
-        label.textContent = chinese ? '语言' : 'Language';
-        systemOption.textContent = chinese ? '跟随系统（自动）' : 'Follow System (Automatic)';
-        document.querySelector('.skip').textContent = chinese ? '跳转到正文' : 'Skip to content';
-        selector.value = preference;
-        document.querySelector('#language-control').hidden = false;
-      }
-      selector.addEventListener('change', () => {
-        preference = selector.value;
-        try { localStorage.setItem(key, preference); } catch (_) {}
-        const address = new URL(location.href);
-        address.searchParams.delete('lang');
-        history.replaceState(null, '', address);
-        render();
-      });
-      window.addEventListener('languagechange', () => { if (preference === 'system') render(); });
-      render();
-    })();
-  </script>
+
+  <footer>
+    <div>
+      <a href="../index.html">
+        <span data-lang="en">All apps</span>
+        <span data-lang="zh" lang="zh-Hans">全部应用</span>
+        <span data-lang="ja" lang="ja">すべてのアプリ</span>
+        <span data-lang="ko" lang="ko">모든 앱</span>
+        <span data-lang="de" lang="de">Alle Apps</span>
+        <span data-lang="fr" lang="fr">Toutes les apps</span>
+        <span data-lang="es" lang="es">Todas las apps</span>
+        <span data-lang="pt" lang="pt">Todos os apps</span>
+      </a> · 
+      <a href="../website-privacy.html">
+        <span data-lang="en">Website privacy</span>
+        <span data-lang="zh" lang="zh-Hans">网站隐私</span>
+        <span data-lang="ja" lang="ja">プライバシーポリシー</span>
+        <span data-lang="ko" lang="ko">개인정보 처리방침</span>
+        <span data-lang="de" lang="de">Datenschutz</span>
+        <span data-lang="fr" lang="fr">Confidentialité</span>
+        <span data-lang="es" lang="es">Privacidad del sitio</span>
+        <span data-lang="pt" lang="pt">Privacidade do site</span>
+      </a> · 
+      <a href="mailto:kssicstudio@gmail.com">
+        <span data-lang="en">Contact support</span>
+        <span data-lang="zh" lang="zh-Hans">联系支持</span>
+        <span data-lang="ja" lang="ja">サポートへのお問い合わせ</span>
+        <span data-lang="ko" lang="ko">고객 지원 문의</span>
+        <span data-lang="de" lang="de">Support kontaktieren</span>
+        <span data-lang="fr" lang="fr">Contacter l'assistance</span>
+        <span data-lang="es" lang="es">Contactar con soporte</span>
+        <span data-lang="pt" lang="pt">Fale com o suporte</span>
+      </a>
+    </div>
+    <p>
+      <span data-lang="en">Apple, Mac, macOS and App Store are trademarks of Apple Inc. These independently developed apps are not endorsed by Apple.</span>
+      <span data-lang="zh" lang="zh-Hans">Apple、Mac、macOS 与 App Store 为 Apple Inc. 的商标。这些独立开发的应用不代表 Apple 的背书。</span>
+      <span data-lang="ja" lang="ja">Apple、Mac、macOS、App Store は Apple Inc. の商標です。これらの独立して開発されたアプリは Apple による承認を受けたものではありません。</span>
+      <span data-lang="ko" lang="ko">Apple, Mac, macOS 및 App Store는 Apple Inc.의 상표입니다. 이 독립적으로 개발된 앱들은 Apple의 보증을 받지 않습니다.</span>
+      <span data-lang="de" lang="de">Apple, Mac, macOS und App Store sind Marken von Apple Inc. Diese unabhängig entwickelten Apps werden nicht von Apple unterstützt.</span>
+      <span data-lang="fr" lang="fr">Apple, Mac, macOS et App Store sont des marques d'Apple Inc. Ces applications développées indépendamment ne sont pas approuvées par Apple.</span>
+      <span data-lang="es" lang="es">Apple, Mac, macOS y App Store son marcas comerciales de Apple Inc. Estas aplicaciones desarrolladas de forma independiente no están respaldadas por Apple.</span>
+      <span data-lang="pt" lang="pt">Apple, Mac, macOS e App Store são marcas comerciais da Apple Inc. Esses aplicativos desenvolvidos de forma independente não são endossados pela Apple.</span>
+    </p>
+    <small>
+      <span data-lang="en">Site version</span>
+      <span data-lang="zh" lang="zh-Hans">网站版本</span>
+      <span data-lang="ja" lang="ja">サイトバージョン</span>
+      <span data-lang="ko" lang="ko">사이트 버전</span>
+      <span data-lang="de" lang="de">Website-Version</span>
+      <span data-lang="fr" lang="fr">Version du site</span>
+      <span data-lang="es" lang="es">Versión del sitio</span>
+      <span data-lang="pt" lang="pt">Versão do site</span>
+       1.2.0 · 2026-09-06</small>
+  </footer>
 </body>
 </html>

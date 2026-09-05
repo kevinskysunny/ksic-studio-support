@@ -59,7 +59,12 @@
 
   let preference = 'system';
   try {
-    const saved = localStorage.getItem(key);
+    let saved = localStorage.getItem(key);
+    if (!saved) {
+      const old = localStorage.getItem('volmixSiteLanguage');
+      if (old === 'zh-Hans') saved = 'zh';
+      else if (old) saved = old;
+    }
     if (allowed.includes(saved)) preference = saved;
   } catch (_) {}
 

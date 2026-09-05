@@ -2,69 +2,274 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>KSIC Studio Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; }
-    body { margin: 0 auto; max-width: 760px; padding: 56px 24px 80px; line-height: 1.7; }
-    h1 { font-size: 34px; letter-spacing: -0.03em; }
-    h2 { margin-top: 32px; font-size: 20px; }
-    .muted { color: #777; }
-    a, button { color: #0a7aff; }
-    button { float: right; border: 1px solid #8885; border-radius: 8px; background: transparent; padding: 6px 10px; font: inherit; cursor: pointer; }
-    [hidden] { display: none; }
-  </style>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/site.js"></script>
 </head>
 <body>
-  <button id="language" type="button" aria-label="Change language">简体中文</button>
+  <a class="skip" href="#main">
+    <span data-lang="en">Skip to content</span>
+    <span data-lang="zh" lang="zh-Hans">跳转到正文</span>
+    <span data-lang="ja" lang="ja">コンテンツへスキップ</span>
+    <span data-lang="ko" lang="ko">본문으로 건너뛰기</span>
+    <span data-lang="de" lang="de">Zum Inhalt springen</span>
+    <span data-lang="fr" lang="fr">Passer au contenu</span>
+    <span data-lang="es" lang="es">Saltar al contenido</span>
+    <span data-lang="pt" lang="pt">Pular para o conteúdo</span>
+  </a>
 
-  <main data-language="en">
-    <h1>KSIC Studio Privacy Policy</h1>
-    <p class="muted">Effective date: August 14, 2026</p>
-    <p>KSIC Studio respects your privacy. This policy explains how the macOS edition of KSIC Studio handles information.</p>
-    <h2>Data we do not collect</h2>
-    <p>KSIC Studio requires no account and contains no advertising, analytics, or tracking SDK. We do not upload your work groups, entries, Recents, or imported files to developer servers.</p>
-    <h2>Local data</h2>
-    <p>The work groups, entries, and Recents you create are stored in the macOS App Sandbox. Resetting the app removes that sandbox data. You can proactively export a backup through the system file picker.</p>
-    <h2>Network access</h2>
-    <p>When you open an entry, KSIC Studio hands its address to your default browser. Only when you manually run a health check does the app directly request the related HTTPS address. The destination website may process information required for that network request according to its own privacy policy. KSIC Studio’s developer does not receive that request data.</p>
-    <h2>File access</h2>
-    <p>Import, export, and restore access only the locations and files you explicitly select through the macOS system file picker.</p>
-    <h2>Changes and contact</h2>
-    <p>We will update this page if the app’s features or data handling changes. For privacy questions, contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+  <header class="bar">
+    <a class="brand" href="index.html">KSIC <span> / 
+      <span data-lang="en">Privacy Policy</span>
+      <span data-lang="zh" lang="zh-Hans">隐私政策</span>
+      <span data-lang="ja" lang="ja">プライバシーポリシー</span>
+      <span data-lang="ko" lang="ko">개인정보 처리방침</span>
+      <span data-lang="de" lang="de">Datenschutzerklärung</span>
+      <span data-lang="fr" lang="fr">Politique de confidentialité</span>
+      <span data-lang="es" lang="es">Política de privacidad</span>
+      <span data-lang="pt" lang="pt">Política de Privacidade</span>
+    </span></a>
+    <label class="language">
+      <span data-lang="en">Language</span>
+      <span data-lang="zh" lang="zh-Hans">语言</span>
+      <span data-lang="ja" lang="ja">言語</span>
+      <span data-lang="ko" lang="ko">언어</span>
+      <span data-lang="de" lang="de">Sprache</span>
+      <span data-lang="fr" lang="fr">Langue</span>
+      <span data-lang="es" lang="es">Idioma</span>
+      <span data-lang="pt" lang="pt">Idioma</span>
+      <select id="language" aria-label="Language / 语言">
+        <option value="system">跟随系统 (自动)</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+      </select>
+    </label>
+  </header>
+
+  <main id="main">
+    <!-- English -->
+    <section data-lang="en">
+      <a class="back" href="index.html">← All apps</a>
+      <h1>KSIC Studio Privacy Policy</h1>
+      <p class="meta">Effective date: August 14, 2026</p>
+      <p class="lead">KSIC Studio respects your privacy. This policy explains how the macOS edition of KSIC Studio handles information.</p>
+      
+      <h2>Data We Do Not Collect</h2>
+      <p>KSIC Studio requires no user account and contains no advertising, analytics, or tracking SDKs. We do not upload your work groups, links, Recents, or imported files to any remote server.</p>
+      
+      <h2>Local Data Storage</h2>
+      <p>The work groups, entries, and Recents you create are stored strictly inside the local macOS App Sandbox. You can proactively export a backup through the system file picker at any time.</p>
+      
+      <h2>Network Access</h2>
+      <p>When you open an entry, KSIC Studio hands its URL to your default browser. Only when you manually run a health check does the app directly request the related HTTPS address.</p>
+      
+      <h2>Contact</h2>
+      <p>For privacy inquiries, please contact <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+    </section>
+
+    <!-- Chinese -->
+    <section data-lang="zh" lang="zh-Hans">
+      <a class="back" href="index.html">← 全部应用</a>
+      <h1>KSIC Studio 隐私政策</h1>
+      <p class="meta">生效日期：2026 年 8 月 14 日</p>
+      <p class="lead">KSIC Studio 尊重你的隐私。本政策说明 macOS 版 KSIC Studio 如何处理信息。</p>
+      
+      <h2>我们不收集的数据</h2>
+      <p>KSIC Studio 不要求注册账户，不包含广告、分析或跟踪 SDK，也不会向开发者服务器上传你的分组、入口、最近使用记录或导入文件。</p>
+      
+      <h2>本地数据</h2>
+      <p>你创建的分组、入口和最近使用记录保存在 macOS App Sandbox 沙盒中。你也可以通过系统文件选择器主动导出备份。</p>
+      
+      <h2>网络访问</h2>
+      <p>打开入口时，KSIC Studio 将地址交给系统默认浏览器。只有在你主动执行健康检查时，App 才会直接请求对应的 HTTPS 地址。</p>
+      
+      <h2>政策变更与联系</h2>
+      <p>如有隐私疑问，请联系 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>。</p>
+    </section>
+
+    <!-- Japanese -->
+    <section data-lang="ja" lang="ja">
+      <a class="back" href="index.html">← すべてのアプリ</a>
+      <h1>KSIC Studio プライバシーポリシー</h1>
+      <p class="meta">発効日：2026年8月14日</p>
+      <p class="lead">KSIC Studioはお客様のプライバシーを尊重します。本ポリシーではmacOS版KSIC Studioにおける情報の取り扱いについて説明します。</p>
+      
+      <h2>収集しないデータ</h2>
+      <p>KSIC Studioはアカウント登録を必要とせず、広告、アナリティクス、トラッキングSDKを含みません。グループ、リンク、履歴が外部サーバーに送信されることはありません。</p>
+      
+      <h2>ローカルデータ保存</h2>
+      <p>作成されたすべてのデータはmacOSのApp Sandbox内に安全に保存されます。いつでもシステムファイルピッカーからバックアップをエクスポートできます。</p>
+      
+      <h2>ネットワークアクセス</h2>
+      <p>リンクを開く際、URLは既定のブラウザに渡されます。手動でヘルスチェックを実行した場合にのみ、対象のHTTPSアドレスへ直接リクエストを送信します。</p>
+      
+      <h2>お問い合わせ</h2>
+      <p>プライバシーに関するお問い合わせは <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a> までご連絡ください。</p>
+    </section>
+
+    <!-- Korean -->
+    <section data-lang="ko" lang="ko">
+      <a class="back" href="index.html">← 모든 앱</a>
+      <h1>KSIC Studio 개인정보 처리방침</h1>
+      <p class="meta">시행일: 2026년 8월 14일</p>
+      <p class="lead">KSIC Studio는 사용자의 개인정보를 소중히 생각합니다. 본 방침은 macOS용 KSIC Studio의 정보 처리에 대해 설명합니다.</p>
+      
+      <h2>수집하지 않는 데이터</h2>
+      <p>KSIC Studio는 계정 생성이 필요 없으며 광고, 분석 또는 추적 SDK가 포함되어 있지 않습니다. 작업 그룹, 링크 및 기록을 원격 서버로 전송하지 않습니다.</p>
+      
+      <h2>로컬 데이터 저장</h2>
+      <p>생성된 모든 데이터는 macOS App Sandbox 내에 로컬로 안전하게 저장됩니다. 시스템 파일 선택기를 통해 언제든지 백업을 내보낼 수 있습니다.</p>
+      
+      <h2>네트워크 접근</h2>
+      <p>항목을 열면 URL이 기본 웹 브라우저로 전달됩니다. 사용자가 수동으로 상태 확인을 실행할 때만 해당 HTTPS 주소로 직접 요청합니다.</p>
+      
+      <h2>문의하기</h2>
+      <p>개인정보 관련 문의는 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>으로 문의해 주세요.</p>
+    </section>
+
+    <!-- German -->
+    <section data-lang="de" lang="de">
+      <a class="back" href="index.html">← Alle Apps</a>
+      <h1>KSIC Studio Datenschutzerklärung</h1>
+      <p class="meta">Gültig ab: 14. August 2026</p>
+      <p class="lead">KSIC Studio respektiert Ihre Privatsphäre. Diese Erklärung erläutert den Umgang mit Daten in KSIC Studio für macOS.</p>
+      
+      <h2>Daten, die wir nicht erfassen</h2>
+      <p>KSIC Studio erfordert kein Benutzerkonto und enthält keinerlei Werbe-, Analyse- oder Tracking-SDKs. Daten werden niemals an Server übertragen.</p>
+      
+      <h2>Lokale Datenspeicherung</h2>
+      <p>Alle erstellten Einträge verbleiben sicher in der lokalen macOS App Sandbox. Sie können jederzeit Sicherungskopien exportieren.</p>
+      
+      <h2>Netzwerkzugriff</h2>
+      <p>Links werden an Ihren Standardbrowser übergeben. Nur bei manueller Verbindungsprüfung fragt die App die betreffende HTTPS-Adresse direkt ab.</p>
+      
+      <h2>Kontakt</h2>
+      <p>Bei Fragen zum Datenschutz kontaktieren Sie bitte <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+    </section>
+
+    <!-- French -->
+    <section data-lang="fr" lang="fr">
+      <a class="back" href="index.html">← Toutes les apps</a>
+      <h1>Politique de confidentialité de KSIC Studio</h1>
+      <p class="meta">Date d'effet : 14 août 2026</p>
+      <p class="lead">KSIC Studio respecte votre vie privée. Cette politique décrit la gestion des informations dans l'application macOS.</p>
+      
+      <h2>Données non collectées</h2>
+      <p>KSIC Studio ne requiert aucun compte et ne contient aucun SDK publicitaire, analytique ou de traçage. Vos données ne sont jamais téléversées.</p>
+      
+      <h2>Stockage local des données</h2>
+      <p>Vos groupes et liens sont stockés exclusivement dans l'App Sandbox locale de macOS. Vous pouvez exporter une sauvegarde à tout moment.</p>
+      
+      <h2>Accès réseau</h2>
+      <p>L'ouverture d'un lien le transmet à votre navigateur par défaut. L'application n'interroge les URL HTTPS que lors d'un test manuel de santé.</p>
+      
+      <h2>Contact</h2>
+      <p>Pour toute question : <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+    </section>
+
+    <!-- Spanish -->
+    <section data-lang="es" lang="es">
+      <a class="back" href="index.html">← Todas las apps</a>
+      <h1>Política de privacidad de KSIC Studio</h1>
+      <p class="meta">Fecha de entrada en vigor: 14 de agosto de 2026</p>
+      <p class="lead">KSIC Studio respeta su privacidad. Esta política explica el tratamiento de la información en KSIC Studio para macOS.</p>
+      
+      <h2>Datos que no recopilamos</h2>
+      <p>KSIC Studio no requiere cuenta de usuario y no contiene SDK de publicidad, análisis o seguimiento. Sus datos nunca se cargan a servidores.</p>
+      
+      <h2>Almacenamiento local de datos</h2>
+      <p>Los grupos y enlaces creados se guardan estrictamente dentro del App Sandbox local de macOS. Puede exportar copias de seguridad en cualquier momento.</p>
+      
+      <h2>Acceso a la red</h2>
+      <p>Al abrir un enlace, se pasa a su navegador predeterminado. Solo se realizan peticiones directas HTTPS durante la verificación manual de estado.</p>
+      
+      <h2>Contacto</h2>
+      <p>Preguntas sobre privacidad: <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+    </section>
+
+    <!-- Portuguese -->
+    <section data-lang="pt" lang="pt">
+      <a class="back" href="index.html">← Todos os apps</a>
+      <h1>Política de Privacidade do KSIC Studio</h1>
+      <p class="meta">Data de vigência: 14 de agosto de 2026</p>
+      <p class="lead">O KSIC Studio respeita sua privacidade. Esta política explica como a edição macOS do KSIC Studio trata as informações.</p>
+      
+      <h2>Dados que não coletamos</h2>
+      <p>O KSIC Studio não exige conta e não contém SDKs de publicidade, análise ou rastreamento. Nenhum dado é enviado a servidores remotos.</p>
+      
+      <h2>Armazenamento local</h2>
+      <p>Seus grupos e links ficam salvos exclusivamente no App Sandbox local do macOS. Você pode exportar backups a qualquer momento.</p>
+      
+      <h2>Acesso à rede</h2>
+      <p>Os links são abertos no seu navegador padrão. Apenas checagens manuais de status fazem requisições diretas a endereços HTTPS.</p>
+      
+      <h2>Contato</h2>
+      <p>Dúvidas de privacidade: <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>.</p>
+    </section>
   </main>
 
-  <main data-language="zh-Hans" hidden>
-    <h1>KSIC Studio 隐私政策</h1>
-    <p class="muted">生效日期：2026 年 8 月 14 日</p>
-    <p>KSIC Studio 尊重你的隐私。本政策说明 macOS 版 KSIC Studio 如何处理信息。</p>
-    <h2>我们不收集的数据</h2>
-    <p>KSIC Studio 不要求注册账户，不包含广告、分析或跟踪 SDK，也不会向开发者服务器上传你的分组、入口、最近使用记录或导入文件。</p>
-    <h2>本地数据</h2>
-    <p>你创建的分组、入口和最近使用记录保存在 macOS App Sandbox 中。重置 App 会删除这些沙盒内数据。你也可以通过系统文件选择器主动导出备份。</p>
-    <h2>网络访问</h2>
-    <p>打开入口时，KSIC Studio 将地址交给系统默认浏览器。只有在你主动执行健康检查时，App 才会直接请求对应的 HTTPS 地址；目标网站可能按其自身隐私政策处理网络请求所必需的信息。KSIC Studio 开发者不会接收这些请求数据。</p>
-    <h2>文件访问</h2>
-    <p>导入、导出与恢复仅访问你通过 macOS 系统文件选择器明确选取的位置和文件。</p>
-    <h2>政策变更与联系</h2>
-    <p>如功能或数据处理方式发生变化，本页面会同步更新。如有隐私问题，请联系 <a href="mailto:kssicstudio@gmail.com">kssicstudio@gmail.com</a>。</p>
-  </main>
-
-  <script>
-    const button = document.querySelector('#language');
-    const english = document.querySelector('[data-language="en"]');
-    const chinese = document.querySelector('[data-language="zh-Hans"]');
-    function setLanguage(language) {
-      const isChinese = language === 'zh-Hans';
-      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
-      document.title = isChinese ? 'KSIC Studio 隐私政策' : 'KSIC Studio Privacy Policy';
-      english.hidden = isChinese;
-      chinese.hidden = !isChinese;
-      button.textContent = isChinese ? 'English' : '简体中文';
-      button.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换至简体中文');
-    }
-    setLanguage(navigator.language.toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
-    button.addEventListener('click', () => setLanguage(chinese.hidden ? 'zh-Hans' : 'en'));
-  </script>
+  <footer>
+    <div>
+      <a href="index.html">
+        <span data-lang="en">All apps</span>
+        <span data-lang="zh" lang="zh-Hans">全部应用</span>
+        <span data-lang="ja" lang="ja">すべてのアプリ</span>
+        <span data-lang="ko" lang="ko">모든 앱</span>
+        <span data-lang="de" lang="de">Alle Apps</span>
+        <span data-lang="fr" lang="fr">Toutes les apps</span>
+        <span data-lang="es" lang="es">Todas las apps</span>
+        <span data-lang="pt" lang="pt">Todos os apps</span>
+      </a> · 
+      <a href="support.html">
+        <span data-lang="en">Support guide</span>
+        <span data-lang="zh" lang="zh-Hans">支持指南</span>
+        <span data-lang="ja" lang="ja">サポートガイド</span>
+        <span data-lang="ko" lang="ko">지원 가이드</span>
+        <span data-lang="de" lang="de">Support-Handbuch</span>
+        <span data-lang="fr" lang="fr">Guide d'assistance</span>
+        <span data-lang="es" lang="es">Guía de soporte</span>
+        <span data-lang="pt" lang="pt">Guia de suporte</span>
+      </a> · 
+      <a href="mailto:kssicstudio@gmail.com">
+        <span data-lang="en">Contact support</span>
+        <span data-lang="zh" lang="zh-Hans">联系支持</span>
+        <span data-lang="ja" lang="ja">サポートへのお問い合わせ</span>
+        <span data-lang="ko" lang="ko">고객 지원 문의</span>
+        <span data-lang="de" lang="de">Support kontaktieren</span>
+        <span data-lang="fr" lang="fr">Contacter l'assistance</span>
+        <span data-lang="es" lang="es">Contactar con soporte</span>
+        <span data-lang="pt" lang="pt">Fale com o suporte</span>
+      </a>
+    </div>
+    <p>
+      <span data-lang="en">Apple, Mac, macOS and App Store are trademarks of Apple Inc. This independently developed app is not endorsed by Apple.</span>
+      <span data-lang="zh" lang="zh-Hans">Apple、Mac、macOS 与 App Store 为 Apple Inc. 的商标。此独立开发的应用不代表 Apple 的背书。</span>
+      <span data-lang="ja" lang="ja">Apple、Mac、macOS、App Store は Apple Inc. の商標です。この独立して開発されたアプリは Apple による承認を受けたものではありません。</span>
+      <span data-lang="ko" lang="ko">Apple, Mac, macOS 및 App Store는 Apple Inc.의 상표입니다. 이 앱은 Apple의 보증을 받지 않습니다.</span>
+      <span data-lang="de" lang="de">Apple, Mac, macOS und App Store sind Marken von Apple Inc. Diese unabhängig entwickelte App wird nicht von Apple unterstützt.</span>
+      <span data-lang="fr" lang="fr">Apple, Mac, macOS et App Store sont des marques d'Apple Inc. Cette application indépendante n'est pas approuvée par Apple.</span>
+      <span data-lang="es" lang="es">Apple, Mac, macOS y App Store son marcas comerciales de Apple Inc. Esta app independiente no está respaldada por Apple.</span>
+      <span data-lang="pt" lang="pt">Apple, Mac, macOS e App Store são marcas comerciais da Apple Inc. Este app independente não é endossado pela Apple.</span>
+    </p>
+    <small>
+      <span data-lang="en">Site version</span>
+      <span data-lang="zh" lang="zh-Hans">网站版本</span>
+      <span data-lang="ja" lang="ja">サイトバージョン</span>
+      <span data-lang="ko" lang="ko">사이트 버전</span>
+      <span data-lang="de" lang="de">Website-Version</span>
+      <span data-lang="fr" lang="fr">Version du site</span>
+      <span data-lang="es" lang="es">Versión del sitio</span>
+      <span data-lang="pt" lang="pt">Versão do site</span>
+       1.2.0 · 2026-09-06</small>
+  </footer>
 </body>
 </html>
