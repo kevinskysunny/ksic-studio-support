@@ -42,9 +42,9 @@
     "nativeStore": "macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website"
   },
   {
-    "id": "networkconsole-lite",
-    "name": "NetworkConsole Lite",
-    "mark": "NC",
+    "id": "netdoctor",
+    "name": "NetDoctor",
+    "mark": "ND",
     "tag": [
       "Network checkup",
       "网络体检"
@@ -75,11 +75,11 @@
       "Read-only diagnostics, not automatic repair or a VPN service. Connectivity tests contact public endpoints. Results describe the sampled connection and do not guarantee that every service is reachable.",
       "仅提供只读诊断，不是自动修复或 VPN 服务。连通性测试会访问公开端点；结果反映采样情况，不保证所有服务均可访问。"
     ],
-    "support": "networkconsole-lite/support.html",
-    "privacy": "networkconsole-lite/privacy.html",
+    "support": "netdoctor/support.html",
+    "privacy": "netdoctor/privacy.html",
     "demo": null,
-    "store": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12&ct=ksic_website",
-    "version": "1.0",
+    "store": "https://apps.apple.com/us/app/netdoctor/id6801707344?mt=12&ct=ksic_website",
+    "version": "1.1",
     "os": "14.0",
     "nativeStore": "macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website"
   },

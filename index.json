@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-20",
   "apps": [
     {
       "id": "ksic-studio",
@@ -115,21 +115,21 @@
       "version": "1.1.6"
     },
     {
-      "id": "networkconsole-lite",
-      "name": "NetworkConsole Lite",
+      "id": "netdoctor",
+      "name": "NetDoctor",
       "platform": "macOS",
       "videos": [],
       "summary": {
         "en": "Inspect your Mac’s network state and get practical next steps without changing network settings.",
         "zh": "检查 Mac 网络状态并获取排查建议，不修改网络设置。"
       },
-      "supportUrl": "networkconsole-lite/support.html",
-      "privacyUrl": "networkconsole-lite/privacy.html",
-      "productUrl": "networkconsole-lite/",
-      "appStoreUrl": "https://apps.apple.com/us/app/networkconsole-lite/id6801707344?mt=12&ct=ksic_website",
+      "supportUrl": "netdoctor/support.html",
+      "privacyUrl": "netdoctor/privacy.html",
+      "productUrl": "netdoctor/",
+      "appStoreUrl": "https://apps.apple.com/us/app/netdoctor/id6801707344?mt=12&ct=ksic_website",
       "availability": "available",
-      "verifiedAt": "2026-09-05",
-      "version": "1.0"
+      "verifiedAt": "2026-09-20",
+      "version": "1.1"
     },
     {
       "id": "ie-compat-bridge",
