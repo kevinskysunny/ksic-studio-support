@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-20",
+  "updatedAt": "2026-09-24",
   "apps": [
     {
       "id": "ksic-studio",
@@ -31,29 +31,6 @@
       "version": "1.0.0"
     },
     {
-      "id": "smoothcast",
-      "name": "SmoothCast",
-      "platform": "macOS",
-      "summary": {
-        "zh": "面向产品演示与支持场景的屏幕录制工具。",
-        "en": "A screen recorder for product demos and support workflows."
-      },
-      "supportUrl": "smoothcast/support.html",
-      "privacyUrl": "smoothcast/privacy.html",
-      "videos": [
-        {
-          "id": "smoothcast-1-1-0-guide-package-bilingual",
-          "title": {
-            "zh": "SmoothCast 1.1.0 教程资料包工作流（中英双语字幕）",
-            "en": "SmoothCast 1.1.0 Guide Package Workflow (Bilingual)"
-          },
-          "playerUrl": "smoothcast/review/",
-          "videoUrl": "media/smoothcast/smoothcast-1.1.0-guide-package-bilingual.mp4",
-          "language": "zh-Hans / en"
-        }
-      ]
-    },
-    {
       "id": "presenter-deck",
       "name": "PresenterDeck",
       "platform": "macOS",
@@ -70,11 +47,15 @@
             "zh": "1.1.0 功能演示与排练复盘（中英双语字幕）",
             "en": "1.1.0 Feature Demo & Rehearsal Review (Bilingual)"
           },
-          "playerUrl": "presenter-deck/review/",
+          "playerUrl": "presenter-deck/review/index.html",
           "videoUrl": "media/presenter-deck/presenter-deck-bilingual-demo.mp4",
           "language": "zh-Hans / en"
         }
-      ]
+      ],
+      "appStoreUrl": "https://apps.apple.com/app/id6805086319?mt=12&ct=ksic_website",
+      "availability": "available",
+      "verifiedAt": "2026-09-24",
+      "version": "1.1.0"
     },
     {
       "id": "volmix",
@@ -149,5 +130,5 @@
       "version": "0.6.0"
     }
   ],
-  "siteVersion": "1.2.0"
+  "siteVersion": "1.3.0"
 }

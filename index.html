@@ -3,12 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="KSIC — Mac &amp; Web app information &amp; support — product information, compatibility and support for macOS apps and browser extensions.">
+<meta name="description" content="Kevin Labs — Native, quiet and meticulously crafted macOS tools. Official guides, FAQs, and founder direct support.">
 <meta name="color-scheme" content="light dark">
-<title>KSIC — App information &amp; support</title>
+<title>Kevin Labs — Mac Apps &amp; Support</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:image" content="https://support.kssicstudio.com/assets/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Kevin Labs handle my data and privacy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100% Local-First. All our macOS apps (VolMix, KSIC Studio, NetDoctor, etc.) run inside secure local sandboxes and process data strictly on your Mac. We do not track, collect, or upload your personal files or browsing data to any remote servers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I restore my purchase on a new or second Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mac App Store purchases are tied to your Apple Account. Sign in with the same Apple ID on your Mac, open the app, and click Restore Purchases. You will never be charged twice for authorized devices under your account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does VolMix request audio capture permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS requires explicit user authorization to detect individual running audio streams. VolMix uses this permission exclusively to adjust per-app volume and mute levels. You can manage this at any time in System Settings → Privacy & Security."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will these apps continue to support future macOS versions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As an independent studio dedicated to the Mac platform, Kevin Labs actively tests and adapts every app against developer betas for each major macOS release."
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="assets/site.css">
 <script defer src="assets/site.js"></script>
 </head>
@@ -25,7 +65,7 @@
 </a>
 
 <header class="bar">
-<a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.png" alt="KSIC Logo" width="32" height="32">KSIC <span> / 
+<a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.png" alt="Kevin Labs Logo" width="32" height="32">Kevin Labs <span> / 
 <span data-lang="en">App support</span>
 <span data-lang="zh" lang="zh-Hans">应用支持</span>
 <span data-lang="ja" lang="ja">アプリサポート</span>
@@ -63,10 +103,27 @@
 
 <!-- English -->
 <section data-lang="en">
-<div class="eyebrow">MACOS &amp; WORKSPACE / APPS &amp; SUPPORT</div>
-<h1>Your apps.<br>Start here.</h1>
-<p class="lead">Find getting-started guides, compatibility details, privacy policies and download information.</p>
-<p class="meta">On a Mac, use “Open App Store on your Mac” to view Mac apps in the App Store. Browser extensions and web tools can be accessed through their project portals. Regional availability and purchase terms depend on your account store.</p>
+<div class="eyebrow">KEVIN LABS / MAC APPS &amp; SUPPORT</div>
+<h1>Native Mac tools,<br>crafted with care.</h1>
+<p class="lead">Official guides, compatibility details, and direct founder channel for Kevin Labs apps.</p>
+
+<div class="callout-box">
+  <div class="callout-badge">Contact Maker</div>
+  <div class="callout-content">
+    <h3>Have a question, idea, or spotted a bug?</h3>
+    <p>I'm Kevin, the independent maker behind Kevin Labs. At this early stage, every piece of feedback from our early users is deeply appreciated. I personally read and reply to every message.</p>
+    <div class="callout-actions">
+      <a class="button button-accent" href="mailto:kssicstudio@gmail.com?subject=%5BKevin%20Labs%20Feedback%5D%20Hi%20Kevin&body=Hi%20Kevin%2C%0A%0A%5BYour%20feedback%20%2F%20question%20%2F%20bug%20report%5D%3A%0A%0A%0A---%0ADevice%3A%20Mac%0AmacOS%20Version%3A%20%0AApp%20Name%20%26%20Version%3A%20">✉️ Email Kevin</a>
+      <a class="button button-outline" href="mailto:kssicstudio@gmail.com?subject=%5BFeature%20Wishlist%5D%20App%20Idea&body=App%20Name%3A%20%0AWhat%20feature%20or%20workflow%20would%20you%20like%20to%20see%3F%3A%0A">💡 Feature Wishlist</a>
+      <a class="button button-outline" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=kssicstudio@gmail.com&su=%5BKevin%20Labs%20Feedback%5D&body=Hi%20Kevin%2C%0A%0A%5BFeedback%5D%3A">🌐 Open Web Gmail</a>
+    </div>
+    <div class="callout-hint">
+      Or email directly: <code class="copy-email" title="Click to copy">kssicstudio@gmail.com</code> <span class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+
+<h2>Apps &amp; Guides</h2>
 <div class="catalog">
 <article class="product">
 <div class="product-top">
@@ -76,8 +133,9 @@
 <h2>VolMix</h2>
 <p>Adjust volume and mute for detected audio apps from your Mac menu bar.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
+<div><a class="video-pill" href="volmix/review/index.html">▶ Bilingual Demo Video</a></div>
 <div class="actions">
-<a class="button" href="volmix/">Product &amp; getting started</a>
+<a class="button" href="volmix/index.html">Product &amp; getting started</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Open App Store on your Mac</a>
 </div>
 </article>
@@ -105,8 +163,9 @@
 <h2>KSIC Studio</h2>
 <p>Organize, search and open your websites and work resources from a local-first Mac workspace.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
+<div><a class="video-pill" href="review/index.html">▶ Bilingual Demo Video</a></div>
 <div class="actions">
-<a class="button" href="ksic-studio/">Product &amp; getting started</a>
+<a class="button" href="ksic-studio/index.html">Product &amp; getting started</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Open App Store on your Mac</a>
 </div>
 </article>
@@ -120,29 +179,84 @@
 <p>Inspect your Mac’s network state and get practical next steps without changing network settings.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">Product &amp; getting started</a>
+<a class="button" href="netdoctor/index.html">Product &amp; getting started</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Open App Store on your Mac</a>
+</div>
+</article>
+
+<article class="product">
+<div class="product-top">
+<span class="monogram color-4" aria-hidden="true">PD</span>
+<span class="eyebrow">Presentation runbook</span>
+</div>
+<h2>PresenterDeck</h2>
+<p>Native macOS presentation companion: agenda planning, rehearsal review, screen canvas, and mouse spotlight with magnifier.</p>
+<p class="meta">macOS 14.0+ · v1.1.0</p>
+<div><a class="video-pill" href="presenter-deck/review/index.html">▶ Bilingual Demo Video</a></div>
+<div class="actions">
+<a class="button" href="presenter-deck/support.html">Product &amp; getting started</a>
+<a href="macappstores://apps.apple.com/app/id6805086319?mt=12&ct=ksic_website">Open App Store on your Mac</a>
 </div>
 </article>
 </div>
 
-<section class="help">
-<h2>Download or reinstall</h2>
-<p>Mac apps are distributed through the Mac App Store. For IE Compat Bridge, visit its dedicated project portal. Pricing, regional availability and current versions are shown by the respective stores. Use your original Apple Account to reinstall Mac apps.</p>
+<section class="faq-section">
+<h2>Quick Answers &amp; Trust</h2>
+<details class="faq-accordion">
+  <summary>How does Kevin Labs handle my data and privacy?</summary>
+  <div class="faq-answer">
+    <p><strong>100% Local-First.</strong> All our macOS apps (VolMix, KSIC Studio, NetDoctor, etc.) run inside secure local sandboxes and process data strictly on your Mac. We do not track, collect, or upload your personal files or browsing data to any remote servers.</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>How do I restore my purchase on a new or second Mac?</summary>
+  <div class="faq-answer">
+    <p>Mac App Store purchases are tied to your Apple Account. Sign in with the same Apple ID on your Mac, open the app, and click <strong>Restore Purchases</strong>. You will never be charged twice for authorized devices under your account.</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>Why does VolMix request audio capture permissions?</summary>
+  <div class="faq-answer">
+    <p>macOS requires explicit user authorization to detect individual running audio streams. VolMix uses this permission exclusively to adjust per-app volume and mute levels. You can manage this at any time in <strong>System Settings → Privacy &amp; Security</strong>.</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>Will these apps continue to support future macOS versions?</summary>
+  <div class="faq-answer">
+    <p>Yes. As an independent studio dedicated to the Mac platform, Kevin Labs actively tests and adapts every app against developer betas for each major macOS release.</p>
+  </div>
+</details>
 </section>
-<section class="more">
-<h2>More support resources</h2>
-<p>Documentation for other apps; inclusion here does not indicate current download availability.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
-</section>
+
+
 </section>
 
 <!-- Chinese -->
 <section data-lang="zh" lang="zh-Hans">
-<div class="eyebrow">MACOS 与工作流 / 应用与支持</div>
-<h1>你的应用，<br>从这里开始。</h1>
-<p class="lead">查看使用说明、兼容性、隐私政策与下载信息。</p>
-<p class="meta">在 Mac 上请点击“在 Mac 上打开 App Store”前往应用详情；浏览器扩展与工具可直接访问对应专属门户。能否下载与购买取决于对应商店区域及上架状态。其他设备可先查看本页，再到 Mac 上安装。</p>
+<div class="eyebrow">KEVIN LABS / MACOS 原生应用与支持</div>
+<h1>专注 Mac 原生工具，<br>精雕细琢。</h1>
+<p class="lead">Kevin Labs 官方应用指南、使用手册与作者反馈通道。</p>
+
+<div class="callout-box">
+  <div class="callout-badge">联系作者</div>
+  <div class="callout-content">
+    <h3>有任何使用疑问、功能建议或发现了 Bug？</h3>
+    <p>我是 Kevin，Kevin Labs 背后的独立开发者。在早期阶段，每一位种子用户的声音对我来说都弥足珍贵。所有的邮件我都会亲自阅读并认真回复。</p>
+    <div class="callout-actions">
+      <a class="button button-accent" href="mailto:kssicstudio@gmail.com?subject=%5BKevin%20Labs%20反馈%5D%20你好%20Kevin&body=你好%20Kevin%EF%BC%8C%0A%0A%E3%80%90我的使用问题%20%2F%20Bug%20反馈%20%2F%20想法%E3%80%91%EF%BC%9A%0A%0A%0A---%0A设备型号%EF%BC%9AMac%0AmacOS%20版本%EF%BC%9A%0A涉及应用与版本%EF%BC%9A">✉️ 发邮件给 Kevin</a>
+      <a class="button button-outline" href="mailto:kssicstudio@gmail.com?subject=%5B功能愿望清单%5D%20应用建议&body=应用名称%EF%BC%9A%0A你希望增加什么功能或支持什么工作流%EF%BC%9F%EF%BC%9A%0A">💡 提交功能愿望清单</a>
+      <a class="button button-outline" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=kssicstudio@gmail.com&su=%5BKevin%20Labs%20反馈%5D&body=你好%20Kevin%EF%BC%8C%0A%0A%E3%80%90反馈内容%E3%80%91%EF%BC%9A">🌐 在网页版 Gmail 打开</a>
+    </div>
+    <div class="callout-hint">
+      直接联系邮箱：<code class="copy-email" title="点击复制">kssicstudio@gmail.com</code> <span class="copy-feedback"></span>
+    </div>
+  </div>
+</div>
+
+<h2>全部应用与指南</h2>
 <div class="catalog">
 <article class="product">
 <div class="product-top">
@@ -152,8 +266,9 @@
 <h2>VolMix</h2>
 <p>在 Mac 菜单栏中，为检测到的音频应用独立调音或静音。</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
+<div><a class="video-pill" href="volmix/review/index.html">▶ 中英双语演示视频</a></div>
 <div class="actions">
-<a class="button" href="volmix/">使用与产品说明</a>
+<a class="button" href="volmix/index.html">使用与产品说明</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">在 Mac 上打开 App Store</a>
 </div>
 </article>
@@ -181,8 +296,9 @@
 <h2>KSIC Studio</h2>
 <p>在本地优先的 Mac 工作空间中整理、搜索和打开网站与工作资源。</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
+<div><a class="video-pill" href="review/index.html">▶ 中英双语演示视频</a></div>
 <div class="actions">
-<a class="button" href="ksic-studio/">使用与产品说明</a>
+<a class="button" href="ksic-studio/index.html">使用与产品说明</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">在 Mac 上打开 App Store</a>
 </div>
 </article>
@@ -196,21 +312,59 @@
 <p>检查 Mac 网络状态并获取排查建议，不修改网络设置。</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">使用与产品说明</a>
+<a class="button" href="netdoctor/index.html">使用与产品说明</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">在 Mac 上打开 App Store</a>
+</div>
+</article>
+
+<article class="product">
+<div class="product-top">
+<span class="monogram color-4" aria-hidden="true">PD</span>
+<span class="eyebrow">演示流程台</span>
+</div>
+<h2>PresenterDeck</h2>
+<p>专为演讲者打造的分章节议程规划、秒级排练复盘、屏幕画布标注与放大镜聚光灯工具。</p>
+<p class="meta">macOS 14.0+ · v1.1.0</p>
+<div><a class="video-pill" href="presenter-deck/review/index.html">▶ 中英双语演示视频</a></div>
+<div class="actions">
+<a class="button" href="presenter-deck/support.html">使用与产品说明</a>
+<a href="macappstores://apps.apple.com/app/id6805086319?mt=12&ct=ksic_website">在 Mac 上打开 App Store</a>
 </div>
 </article>
 </div>
 
-<section class="help">
-<h2>下载与重新安装</h2>
-<p>Mac 应用通过 Mac App Store 分发。IE Compat Bridge 扩展请访问其专属官网。价格、地区可用性及最新版本以各商店为准。重新安装 Mac 应用请使用原购买 Apple 账户。</p>
+<section class="faq-section">
+<h2>常见问题与安心保障</h2>
+<details class="faq-accordion">
+  <summary>Kevin Labs 是如何保障我的数据安全与隐私的？</summary>
+  <div class="faq-answer">
+    <p><strong>100% 本地优先（Local-First）。</strong> 我们的 macOS 应用（VolMix、KSIC Studio、NetDoctor 等）完全运行在苹果系统的沙盒隔离环境中，所有操作与数据仅保留在您的 Mac 本地。我们不收集、不上报、不上传任何个人文件或浏览数据。</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>更换新 Mac 或在第二台 Mac 上如何恢复购买？</summary>
+  <div class="faq-answer">
+    <p>Mac App Store 的购买记录与您的 Apple 账户绑定。只需在新 Mac 上登录同一 Apple ID，打开 App 并点击<strong>恢复购买（Restore Purchases）</strong>即可，绝不会重复扣费。</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>为什么 VolMix 需要请求系统音频捕获权限？</summary>
+  <div class="faq-answer">
+    <p>macOS 严格限制后台进程探测声音，必须由用户显式授权。VolMix 仅使用该权限识别正在发声的应用程序以提供单独音量与静音调节。您可以随时在 <strong>系统设置 → 隐私与安全性</strong> 中进行管理。</p>
+  </div>
+</details>
+
+<details class="faq-accordion">
+  <summary>应用会持续适配未来的 macOS 新系统吗？</summary>
+  <div class="faq-answer">
+    <p>当然。作为专注 Mac 平台的独立工坊，我们会在苹果每个开发者 Beta 阶段积极跟进测试，确保新系统发布时第一时间平滑可用。</p>
+  </div>
+</details>
 </section>
-<section class="more">
-<h2>更多支持资料</h2>
-<p>以下提供其他应用的文档；此处不表示当前已可下载。</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
-</section>
+
+
 </section>
 
 <!-- Japanese -->
@@ -229,7 +383,7 @@
 <p>Macのメニューバーから、検出されたオーディオアプリの音量調整とミュートを個別に行えます。</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">製品案内とスタートガイド</a>
+<a class="button" href="volmix/index.html">製品案内とスタートガイド</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">MacでApp Storeを開く</a>
 </div>
 </article>
@@ -258,7 +412,7 @@
 <p>ローカルファーストのMacワークスペースから、Webサイトや業務リソースを整理・検索・起動します。</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">製品案内とスタートガイド</a>
+<a class="button" href="ksic-studio/index.html">製品案内とスタートガイド</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">MacでApp Storeを開く</a>
 </div>
 </article>
@@ -272,7 +426,7 @@
 <p>ネットワーク設定を変更することなく、Macのネットワーク状態を把握し、実践的な対処法を取得します。</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">製品案内とスタートガイド</a>
+<a class="button" href="netdoctor/index.html">製品案内とスタートガイド</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">MacでApp Storeを開く</a>
 </div>
 </article>
@@ -285,7 +439,7 @@
 <section class="more">
 <h2>その他のサポートリソース</h2>
 <p>その他のアプリのドキュメントです。ここへの掲載は現在の提供を保証するものではありません。</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -305,7 +459,7 @@
 <p>Mac 메뉴 막대에서 감지된 오디오 앱의 음량을 개별적으로 조절하거나 음소거할 수 있습니다.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">제품 소개 및 시작 가이드</a>
+<a class="button" href="volmix/index.html">제품 소개 및 시작 가이드</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Mac에서 App Store 열기</a>
 </div>
 </article>
@@ -334,7 +488,7 @@
 <p>로컬 우선 Mac 워크스페이스에서 웹사이트와 업무 리소스를 정리, 검색 및 실행하세요.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">제품 소개 및 시작 가이드</a>
+<a class="button" href="ksic-studio/index.html">제품 소개 및 시작 가이드</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Mac에서 App Store 열기</a>
 </div>
 </article>
@@ -348,7 +502,7 @@
 <p>네트워크 설정을 변경하지 않고 Mac의 네트워크 상태를 확인하고 실질적인 해결 방법을 얻으세요.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">제품 소개 및 시작 가이드</a>
+<a class="button" href="netdoctor/index.html">제품 소개 및 시작 가이드</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Mac에서 App Store 열기</a>
 </div>
 </article>
@@ -361,7 +515,7 @@
 <section class="more">
 <h2>기타 지원 자료</h2>
 <p>기타 앱에 대한 문서입니다. 여기에 포함되어 있다고 해서 현재 다운로드 가능함을 의미하지는 않습니다.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -381,7 +535,7 @@
 <p>Lautstärke und Stummschaltung für erkannte Audio-Apps direkt in der Mac-Menüleiste anpassen.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">Produkt &amp; Erste Schritte</a>
+<a class="button" href="volmix/index.html">Produkt &amp; Erste Schritte</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Im Mac App Store öffnen</a>
 </div>
 </article>
@@ -410,7 +564,7 @@
 <p>Websites und Arbeitsressourcen in einem lokalen Mac-Arbeitsbereich organisieren, durchsuchen und öffnen.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">Produkt &amp; Erste Schritte</a>
+<a class="button" href="ksic-studio/index.html">Produkt &amp; Erste Schritte</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Im Mac App Store öffnen</a>
 </div>
 </article>
@@ -424,7 +578,7 @@
 <p>Netzwerkstatus des Mac prüfen und praktische Schritte erhalten, ohne Systemeinstellungen zu verändern.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">Produkt &amp; Erste Schritte</a>
+<a class="button" href="netdoctor/index.html">Produkt &amp; Erste Schritte</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Im Mac App Store öffnen</a>
 </div>
 </article>
@@ -437,7 +591,7 @@
 <section class="more">
 <h2>Weitere Ressourcen</h2>
 <p>Dokumentation für weitere Anwendungen.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -457,7 +611,7 @@
 <p>Réglez le volume et coupez le son des applications audio détectées depuis la barre des menus Mac.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">Produit et prise en main</a>
+<a class="button" href="volmix/index.html">Produit et prise en main</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Ouvrir dans le Mac App Store</a>
 </div>
 </article>
@@ -486,7 +640,7 @@
 <p>Organisez, recherchez et ouvrez vos ressources web depuis un espace de travail local sur Mac.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">Produit et prise en main</a>
+<a class="button" href="ksic-studio/index.html">Produit et prise en main</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Ouvrir dans le Mac App Store</a>
 </div>
 </article>
@@ -500,7 +654,7 @@
 <p>Inspectez l'état du réseau de votre Mac et obtenez des étapes utiles sans modifier vos réglages.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">Produit et prise en main</a>
+<a class="button" href="netdoctor/index.html">Produit et prise en main</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Ouvrir dans le Mac App Store</a>
 </div>
 </article>
@@ -513,7 +667,7 @@
 <section class="more">
 <h2>Autres ressources</h2>
 <p>Documentation pour d'autres applications.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -533,7 +687,7 @@
 <p>Ajusta el volumen y silencia las aplicaciones de audio detectadas desde la barra de menús de Mac.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">Producto e inicio rápido</a>
+<a class="button" href="volmix/index.html">Producto e inicio rápido</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Abrir en Mac App Store</a>
 </div>
 </article>
@@ -562,7 +716,7 @@
 <p>Organiza, busca y abre tus sitios web y recursos desde un espacio de trabajo local en Mac.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">Producto e inicio rápido</a>
+<a class="button" href="ksic-studio/index.html">Producto e inicio rápido</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Abrir en Mac App Store</a>
 </div>
 </article>
@@ -576,7 +730,7 @@
 <p>Inspecciona el estado de red de tu Mac y obtén pasos prácticos sin modificar la configuración.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">Producto e inicio rápido</a>
+<a class="button" href="netdoctor/index.html">Producto e inicio rápido</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Abrir en Mac App Store</a>
 </div>
 </article>
@@ -589,7 +743,7 @@
 <section class="more">
 <h2>Más recursos</h2>
 <p>Documentación para otras aplicaciones.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -609,7 +763,7 @@
 <p>Ajuste o volume e silencie aplicativos de áudio detectados na barra de menus do Mac.</p>
 <p class="meta">macOS 14.2+ · v1.1.6</p>
 <div class="actions">
-<a class="button" href="volmix/">Produto e introdução</a>
+<a class="button" href="volmix/index.html">Produto e introdução</a>
 <a href="macappstores://apps.apple.com/app/id6806717830?mt=12&ct=ksic_website">Abrir na Mac App Store</a>
 </div>
 </article>
@@ -638,7 +792,7 @@
 <p>Organize, pesquise e abra seus sites e recursos em uma área de trabalho local no Mac.</p>
 <p class="meta">macOS 14.0+ · v1.0.0</p>
 <div class="actions">
-<a class="button" href="ksic-studio/">Produto e introdução</a>
+<a class="button" href="ksic-studio/index.html">Produto e introdução</a>
 <a href="macappstores://apps.apple.com/app/id6801325655?mt=12&ct=ksic_website">Abrir na Mac App Store</a>
 </div>
 </article>
@@ -652,7 +806,7 @@
 <p>Inspecione o status da rede do seu Mac e obtenha etapas práticas sem alterar as configurações.</p>
 <p class="meta">macOS 14.0+ · v1.1</p>
 <div class="actions">
-<a class="button" href="netdoctor/">Produto e introdução</a>
+<a class="button" href="netdoctor/index.html">Produto e introdução</a>
 <a href="macappstores://apps.apple.com/app/id6801707344?mt=12&ct=ksic_website">Abrir na Mac App Store</a>
 </div>
 </article>
@@ -665,7 +819,7 @@
 <section class="more">
 <h2>Outros recursos</h2>
 <p>Documentação para outros aplicativos.</p>
-<a href="smoothcast/support.html">SmoothCast</a> · <a href="presenter-deck/support.html">PresenterDeck</a>
+<a href="presenter-deck/support.html">PresenterDeck</a>
 </section>
 </section>
 
@@ -723,7 +877,7 @@
 <span data-lang="fr" lang="fr">Version du site</span>
 <span data-lang="es" lang="es">Versión del sitio</span>
 <span data-lang="pt" lang="pt">Versão do site</span>
- 1.2.0 · 2026-09-06</small>
+ 1.3.0 · 2026-09-24</small>
 </footer>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "342acd845f9b4bff8ed417a91852872e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
