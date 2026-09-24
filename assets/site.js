@@ -182,7 +182,7 @@
     const mailLink = e.target.closest('a[href^="mailto:"]');
     if (mailLink) {
       const href = mailLink.getAttribute('href') || '';
-      const email = href.replace(/^mailto:/, '').split('?')[0] || 'kssicstudio@gmail.com';
+      const email = href.replace(/^mailto:/, '').split('?')[0] || 'support@kevinlabs.app';
       copyEmail(email).then((ok) => showToast(email, ok));
     }
   });
