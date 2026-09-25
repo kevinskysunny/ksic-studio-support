@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 280" role="presentation">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1c2825; }
+      .dots { fill: #2f3e38; }
+      .cloud { fill: #e7eee8; opacity: .92; }
+    }
+  </style>
+  <rect class="bg" width="1160" height="280" fill="#f7f5ef"/>
+
+  <!-- soft grid dots -->
+  <g class="dots" fill="#e7e2d4">
+    <circle cx="60" cy="40" r="4"/><circle cx="110" cy="40" r="4"/><circle cx="160" cy="40" r="4"/>
+    <circle cx="60" cy="90" r="4"/><circle cx="110" cy="90" r="4"/>
+    <circle cx="1000" cy="230" r="4"/><circle cx="1050" cy="230" r="4"/><circle cx="1100" cy="230" r="4"/>
+    <circle cx="1050" cy="180" r="4"/><circle cx="1100" cy="180" r="4"/>
+  </g>
+
+  <!-- cloud -->
+  <g class="cloud" fill="#ffffff">
+    <rect x="118" y="88" width="128" height="34" rx="17"/>
+    <circle cx="152" cy="88" r="24"/>
+    <circle cx="186" cy="76" r="32"/>
+    <circle cx="220" cy="90" r="22"/>
+  </g>
+
+  <!-- lightning bolt -->
+  <polygon points="338,42 372,42 352,92 378,92 326,162 344,102 318,102" fill="#f2b544"/>
+
+  <!-- four-point stars -->
+  <g>
+    <polygon points="0,-16 4.5,-4.5 16,0 4.5,4.5 0,16 -4.5,4.5 -16,0 -4.5,-4.5" fill="#4338ca" transform="translate(520 62) scale(1.3)"/>
+    <polygon points="0,-16 4.5,-4.5 16,0 4.5,4.5 0,16 -4.5,4.5 -16,0 -4.5,-4.5" fill="#0e7490" transform="translate(700 204)"/>
+    <polygon points="0,-16 4.5,-4.5 16,0 4.5,4.5 0,16 -4.5,4.5 -16,0 -4.5,-4.5" fill="#e8863a" transform="translate(96 196) scale(0.9)"/>
+    <polygon points="0,-16 4.5,-4.5 16,0 4.5,4.5 0,16 -4.5,4.5 -16,0 -4.5,-4.5" fill="#237b70" transform="translate(876 44) scale(0.8)"/>
+    <polygon points="0,-16 4.5,-4.5 16,0 4.5,4.5 0,16 -4.5,4.5 -16,0 -4.5,-4.5" fill="#6743a6" transform="translate(452 120) scale(0.7)"/>
+  </g>
+
+  <!-- big ring -->
+  <circle cx="952" cy="118" r="66" fill="none" stroke="#17665a" stroke-width="14"/>
+  <!-- small donut -->
+  <circle cx="1084" cy="62" r="24" fill="none" stroke="#6743a6" stroke-width="12"/>
+
+  <!-- solid dots -->
+  <circle cx="622" cy="108" r="18" fill="#e8863a"/>
+  <circle cx="762" cy="58" r="12" fill="#215e76"/>
+  <circle cx="438" cy="196" r="10" fill="#4338ca"/>
+  <circle cx="1022" cy="212" r="13" fill="#237b70"/>
+  <circle cx="268" cy="176" r="9" fill="#17665a"/>
+
+  <!-- half circle -->
+  <path d="M 236 216 a 26 26 0 0 1 52 0 z" fill="#215e76"/>
+
+  <!-- plus signs -->
+  <g stroke-linecap="round" stroke-width="6" fill="none">
+    <path d="M 550 232 h 20 M 560 222 v 20" stroke="#6743a6"/>
+    <path d="M 832 168 h 20 M 842 158 v 20" stroke="#17665a"/>
+  </g>
+
+  <!-- squiggle -->
+  <path d="M 664 128 q 10 -16 20 0 t 20 0 t 20 0" fill="none" stroke="#e8863a" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- waves -->
+  <path d="M 380 250 q 24 -18 48 0 t 48 0 t 48 0 t 48 0 t 48 0 t 48 0 t 48 0" fill="none" stroke="#237b70" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 404 268 q 24 -18 48 0 t 48 0 t 48 0 t 48 0 t 48 0 t 48 0" fill="none" stroke="#215e76" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+</svg>
