@@ -104,3 +104,14 @@
 4. **删除 callout 内自我介绍段** — "我是 Kevin,Kevin Labs 背后的独立开发者……"整段 `<p>` 移除,8 个语言全部清除。
 
 备注:本轮执行期间子任务曾被用户中断,前三项由中断前的子任务完成,第四项及收尾由主会话补齐;一次性迁移脚本(`scripts/round4_slim_home.py`)已删除,保持零构建仓库干净。
+
+---
+
+# 第五轮调整(2026-09-25,同日):hero 大标题与徽章移除
+
+用户圈选首页两处继续删减(`index.html` 全部 8 个语言 section):
+
+1. **删除 hero 大标题 h1**("做点好用的小工具,解决日常问题。"等)——首页顶部现为 banner + eyebrow 后直接是联系 callout。`assets/site.js` 的 document.title 绑定逻辑本就带 h1 存在性守卫,无 h1 时保留静态 `<title>`,无需改动。
+2. **删除 callout 内「联系作者」徽章**(`.callout-badge`,8 处)——CSS 规则(含暗色覆盖)同步删除,全站无其他使用。
+
+另:CSS 引用版本号 bump 为 `?v=1.4.1`(因 site.css 有变更,延续第四轮的 Cloudflare 缓存规避方案)。
